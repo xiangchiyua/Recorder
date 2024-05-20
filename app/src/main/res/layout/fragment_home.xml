@@ -7,6 +7,7 @@
     tools:context=".ui.home.HomeFragment">
     <include
         layout="@layout/scrollbills"
+        android:id="@+id/myScrollbills"
         android:layout_width="match_parent"
         android:layout_height="600dp"
         app:layout_constraintEnd_toEndOf="parent"

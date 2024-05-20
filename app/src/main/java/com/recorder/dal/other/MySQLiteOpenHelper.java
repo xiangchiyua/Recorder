@@ -204,7 +204,6 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
                 bill.setRemarks(remarks);
 
                 billList.add(bill);
-
             }
             cursor.close();
             db.close();
@@ -334,7 +333,8 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
     /*写的有点抽象，有时间改
     * 实现了按照分类名称检索统计数据
     * */
-    public Statistic getStatisticByCategory(List<Integer> cateIDList,String name){
+    public Statistic getStatisticByCategory(String name){
+        List<Integer> cateIDList = queryFromCategoryByNameToID(name);
         SQLiteDatabase db = getWritableDatabase();
         Statistic statistic = null;
 

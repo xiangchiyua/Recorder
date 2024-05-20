@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import com.recorder.dal.bean.Bill;
 import com.recorder.dal.bean.Category;
 import com.recorder.dal.bean.Merchant;
+import com.recorder.dal.bean.Statistic;
 
 import java.text.ParseException;
 import java.text.ParsePosition;
@@ -28,6 +29,7 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
     private static final String TABLE_NAME_BILL = "bill";
     private static final String TABLE_NAME_CATEGORY = "category";
     private static final String TABLE_NAME_MERCHANT = "merchant";
+
     //数据库建表操作
     private static final String CREATE_TABLE_BILL = "create table "+TABLE_NAME_BILL+"(billID INT PRIMARY KEY AUTOINCREMENT,\n" +
             "type VARCHAR(50) NOT NULL,\n" +
@@ -43,6 +45,11 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
     private static final String CREATE_TABLE_MERCHANT = "create table "+TABLE_NAME_MERCHANT+"(name VARCHAR(255) NOT NULL,\n" +
             "cateID INT,\n" +
             "FOREIGN KEY (cateID) REFERENCES Category(cateID))";
+
+    //查询语句，计算收入支出总和
+    private static final String QUERY_TOTAL_INCOME = "SELECT SUM(money) as totalIncome FROM "+TABLE_NAME_BILL+" WHERE type = 'Income' AND dateTime BETWEEN ? AND ?";
+    private static final String QUERY_TOTAL_EXPENSE = "SELECT SUM(money) as totalExpense FROM "+TABLE_NAME_BILL+" WHERE type = 'Expense' AND dateTime BETWEEN ? AND ?";
+
 
     public MySQLiteOpenHelper(Context context) {
         super(context, DB_NAME, null, 1);
@@ -244,6 +251,36 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
         return billList;
     }
 
+    /*检索统计数据
+    * 实现了给出起始日期的查询方法
+    * */
+    public Statistic getStatisticByDate(Date startDate,Date endDate){
+        SQLiteDatabase db = getWritableDatabase();
+        Statistic statistic = null;
+
+        SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat ft_time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String startDateStr = ft.format(startDate);
+        String endDateStr = ft.format(endDate);
+        Date now = new Date();
+        String nowTime = ft_time.format(now);
+
+        Cursor cursorIncome=db.rawQuery(QUERY_TOTAL_INCOME,new String[]{startDateStr,endDateStr});
+        float totalIncome = 0;
+        if(cursorIncome.moveToFirst()){
+            totalIncome = cursorIncome.getColumnIndexOrThrow("totalIncome");
+        }
+        cursorIncome.close();
+        Cursor cursorExpense=db.rawQuery(QUERY_TOTAL_EXPENSE,new String[]{startDateStr,endDateStr});
+        float totalExpense = 0;
+        if(cursorExpense.moveToFirst()){
+            totalExpense = cursorExpense.getColumnIndexOrThrow("totalExpense");
+        }
+        cursorExpense.close();
+
+        statistic = new Statistic(nowTime, totalIncome,totalExpense,startDate, endDate);
+        return statistic;
+    }
 
 
 }

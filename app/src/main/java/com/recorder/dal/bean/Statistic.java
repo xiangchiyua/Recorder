@@ -10,6 +10,7 @@ public class Statistic {
     private Date startDate;
     private Date endDate;
 
+    private String name;
     public Statistic() {
     }
 
@@ -69,15 +70,23 @@ public class Statistic {
         this.endDate = endDate;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return "Statistic{" +
-                "statisticID=" + statisticID +
+                "statisticID='" + statisticID + '\'' +
                 ", totalIncome=" + totalIncome +
                 ", totalExpense=" + totalExpense +
-                //", averageExpense=" + averageExpense +
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +
+                ", name='" + name + '\'' +
                 '}';
     }
 }

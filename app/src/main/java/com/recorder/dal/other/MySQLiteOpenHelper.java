@@ -207,6 +207,7 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 
             }
             cursor.close();
+            db.close();
         }
         return billList;
     }
@@ -247,9 +248,56 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 
             }
             cursor.close();
+            db.close();
         }
         return billList;
     }
+
+    //查找指定名称的cateID列，以及备注
+    public List<Category> queryFromCategoryByName(String name){
+
+        SQLiteDatabase db = getWritableDatabase();
+        List<Category> categoryList = new ArrayList<>();
+        Cursor cursor = db.query(TABLE_NAME_CATEGORY,new String[]{"cateID","description"},"name like ?",new String[]{name},
+                null,null,null);
+
+        if(cursor != null){
+            while(cursor.moveToNext()){
+                //String _name = cursor.getString(cursor.getColumnIndexOrThrow("name"));
+                int _cateID = cursor.getInt(cursor.getColumnIndexOrThrow("cateID"));
+                String _description = cursor.getString(cursor.getColumnIndexOrThrow("description"));
+
+                Category category = new Category();
+                category.setCateID(_cateID);
+                category.setDescription(_description);
+                //category.setName(name);
+                categoryList.add(category);
+            }
+            cursor.close();
+            db.close();
+        }
+        return categoryList;
+    }
+    //只查询cateID的方法，方便下面检索统计数据的实现！！！
+    public List<Integer> queryFromCategoryByNameToID(String name){
+
+        SQLiteDatabase db = getWritableDatabase();
+        List<Integer> cateIDList = null;
+        Cursor cursor = db.query(TABLE_NAME_CATEGORY,new String[]{"cateID"},"name like ?",new String[]{name},
+                null,null,null);
+
+        if(cursor != null){
+            while(cursor.moveToNext()){
+                //String _name = cursor.getString(cursor.getColumnIndexOrThrow("name"));
+                int _cateID = cursor.getInt(cursor.getColumnIndexOrThrow("cateID"));
+                cateIDList.add(_cateID);
+            }
+            cursor.close();
+            db.close();
+        }
+        return cateIDList;
+    }
+
 
     /*检索统计数据
     * 实现了给出起始日期的查询方法
@@ -277,10 +325,47 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
             totalExpense = cursorExpense.getColumnIndexOrThrow("totalExpense");
         }
         cursorExpense.close();
+        db.close();
 
         statistic = new Statistic(nowTime, totalIncome,totalExpense,startDate, endDate);
         return statistic;
     }
 
+    /*写的有点抽象，有时间改
+    * 实现了按照分类名称检索统计数据
+    * */
+    public Statistic getStatisticByCategory(List<Integer> cateIDList,String name){
+        SQLiteDatabase db = getWritableDatabase();
+        Statistic statistic = null;
+
+        SimpleDateFormat ft_time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date now = new Date();
+        String nowTime = ft_time.format(now);
+
+        String inClause = cateIDList.toString().replace("[","(").replace("]",")");
+        String QUERY_TOTAL_INCOME_CATE = "SELECT SUM(money) as totalIncome FROM "+TABLE_NAME_BILL+" cateID IN "+inClause;
+        String QUERY_TOTAL_EXPENSE_CATE = "SELECT SUM(money) as totalExpense FROM "+TABLE_NAME_BILL+" cateID IN "+inClause;
+
+        Cursor cursorIncome=db.rawQuery(QUERY_TOTAL_INCOME_CATE,null);
+        float totalIncome = 0;
+        if(cursorIncome.moveToFirst()){
+            totalIncome = cursorIncome.getColumnIndexOrThrow("totalIncome");
+        }
+        cursorIncome.close();
+        Cursor cursorExpense=db.rawQuery(QUERY_TOTAL_EXPENSE_CATE,null);
+        float totalExpense = 0;
+        if(cursorExpense.moveToFirst()){
+            totalExpense = cursorExpense.getColumnIndexOrThrow("totalExpense");
+        }
+        cursorExpense.close();
+        db.close();
+
+        statistic = new Statistic();
+        statistic.setStatisticID(nowTime);
+        statistic.setName(name);
+        statistic.setTotalIncome(totalIncome);
+        statistic.setTotalExpense(totalExpense);
+        return statistic;
+    }
 
 }

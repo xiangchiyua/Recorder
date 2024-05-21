@@ -5,6 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
+    <SearchView
+        android:id="@+id/searchBills"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/borders"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <include
         layout="@layout/scrollbills"
         android:id="@+id/myScrollbills"
@@ -12,5 +20,8 @@
         android:layout_height="600dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/searchBills" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

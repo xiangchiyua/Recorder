@@ -1,0 +1,11 @@
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/purple_200">
+    <item android:id="@+id/ripple">
+        <shape>
+            <!-- 背景颜色 -->
+            <solid android:color="@color/purple_700" />
+            <!-- 圆角半径 -->
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+</ripple>

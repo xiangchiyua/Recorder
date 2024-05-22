@@ -10,22 +10,25 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.recorder.databinding.FragmentViewdatasBinding;
+import com.github.aachartmodel.aainfographics.aachartcreator.AAChartView;
 
+import com.recorder.databinding.FragmentViewdatasBinding;
+import com.recorder.R;
 public class ViewdatasFragment extends Fragment {
 
     private FragmentViewdatasBinding binding;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         ViewdatasViewModel viewDatasViewModel =
                 new ViewModelProvider(this).get(ViewdatasViewModel.class);
-
         binding = FragmentViewdatasBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
         //final TextView textView = binding.textViewdatas;
         //viewDatasViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
+        //aaChartView
+        AAChartView aaChartView=root.findViewById(R.id.aaChartView);
+        aaChartView.aa_drawChartWithChartModel(viewDatasViewModel.aaChartModel);
         return root;
     }
 

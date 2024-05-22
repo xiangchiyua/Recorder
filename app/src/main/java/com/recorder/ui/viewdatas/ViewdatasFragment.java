@@ -24,8 +24,8 @@ public class ViewdatasFragment extends Fragment {
         binding = FragmentViewdatasBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textViewdatas;
-        viewDatasViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        //final TextView textView = binding.textViewdatas;
+        //viewDatasViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

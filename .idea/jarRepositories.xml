@@ -16,5 +16,10 @@
       <option name="name" value="cc3d7946-141e-438e-bbc4-22892753aac2" />
       <option name="url" value="https://www.jitpack.io" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="87d641b2-14c3-43ee-bd88-1b949d46d6bf" />
+      <option name="name" value="87d641b2-14c3-43ee-bd88-1b949d46d6bf" />
+      <option name="url" value="https://jitpack.io/#AAChartModel/AAChartCore-Kotlin" />
+    </remote-repository>
   </component>
 </project>

@@ -6,11 +6,10 @@
     android:layout_height="wrap_content"
     tools:context=".ui.addbills.AddbillsFragment"
     app:cardCornerRadius="16dp">
-
     <GridLayout
         android:id="@+id/addbills"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:alignmentMode="alignMargins"
         android:background="@drawable/borders"
@@ -20,11 +19,12 @@
 
         <Button
             android:id="@+id/button_ensure"
+            android:layout_width="98dp"
+            android:layout_height="72dp"
             android:layout_row="0"
             android:layout_column="2"
-            android:layout_gravity="fill"
+            android:layout_gravity="center"
             android:background="@drawable/ripple"
-            android:padding="8dp"
             android:text="确定"
             android:textSize="25dp" />
 
@@ -59,6 +59,7 @@
                 android:background="@drawable/borders"
                 android:hint="金额"
                 android:textAlignment="center"
+                android:inputType="number"
                 android:textSize="25dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -73,10 +74,11 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputYear"
                 android:layout_width="100dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/borders"
                 android:hint="年份"
                 android:textAlignment="center"
+                android:inputType="date"
                 android:textSize="25dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -91,10 +93,11 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputMonth"
                 android:layout_width="100dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/borders"
                 android:hint="月份"
                 android:textAlignment="center"
+                android:inputType="date"
                 android:textSize="25dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -109,10 +112,11 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputDate"
                 android:layout_width="100dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/borders"
                 android:hint="日期"
                 android:textAlignment="center"
+                android:inputType="date"
                 android:textSize="25dp" />
         </com.google.android.material.textfield.TextInputLayout>
 

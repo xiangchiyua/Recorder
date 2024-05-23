@@ -13,6 +13,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.github.aachartmodel.aainfographics.aachartcreator.AAChartView;
 
+import com.recorder.model.*;
+
 import com.recorder.databinding.FragmentViewdatasBinding;
 import com.recorder.R;
 public class ViewdatasFragment extends Fragment {

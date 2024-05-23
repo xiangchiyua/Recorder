@@ -14,21 +14,22 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.recorder.databinding.FragmentHomeBinding;
 import com.recorder.R;
+import com.recorder.model.*;
 
 import java.util.zip.Inflater;
 
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
-    private void addBills(){
+    private void addBills(Bill[] bills){
         LinearLayout linearLayout=getView().findViewById(R.id.linearbills);
         for(int i=1;i<=5;i++){
             String billId="biils"+Integer.toString(i);
             //Log.d("My", billId);
             //Log.d("My", Integer.toString(getResources().getIdentifier(billId,"id", getActivity().getPackageName())));
-            View bill=linearLayout.findViewById(
+            View billView=linearLayout.findViewById(
                     getResources().getIdentifier(billId,"id", getActivity().getPackageName()));
-            TextView text=bill.findViewById(R.id.billName);
+            TextView text=billView.findViewById(R.id.billName);
             text.setText(Integer.toString(i));
         }
     }
@@ -38,12 +39,11 @@ public class HomeFragment extends Fragment {
                 new ViewModelProvider(this).get(HomeViewModel.class);
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        //Log.d("My","caonima");
         return root;
     }
     public void onResume() {
         super.onResume();
-        addBills();
+        addBills(null);
     }
     @Override
     public void onDestroyView() {

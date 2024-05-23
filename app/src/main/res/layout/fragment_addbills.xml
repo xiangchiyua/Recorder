@@ -17,4 +17,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switchAutoBill"
+        android:layout_width="262dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/borders"
+        android:text="是否打开自动记账"
+        android:textSize="18dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

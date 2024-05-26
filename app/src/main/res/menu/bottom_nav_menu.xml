@@ -9,7 +9,7 @@
     <item
         android:id="@+id/navigation_viewdatas"
         android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_viewdatas" />
+        android:title="@string/navi_viewdatas" />
 
     <item
         android:id="@+id/navigation_addbills"

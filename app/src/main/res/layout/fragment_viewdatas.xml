@@ -17,7 +17,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
+            <!--
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="最近七天数据统计"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                android:background="@drawable/borders"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            -->
             <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
                 android:id="@+id/aaChartView1"
                 android:layout_width="match_parent"
@@ -35,4 +47,5 @@
                 app:layout_constraintTop_toBottomOf="@id/aaChartView1" />
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,14 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
-    <include
-        layout="@layout/datepicker_button"
-        android:id="@+id/DatePickerButton"
+
+    <LinearLayout
+        android:id="@+id/linearBtn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+        <Button
+            android:id="@+id/btnBegin"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="起始时间"
+            android:background="@drawable/ripple"
+            android:layout_margin="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnEnd"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="结束时间"
+            android:background="@drawable/ripple"
+            android:layout_margin="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnBegin"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <!--
     <SearchView
         android:id="@+id/searchBills"
         android:layout_width="match_parent"
@@ -22,6 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    -->
     <include
         layout="@layout/scrollbills"
         android:id="@+id/myScrollbills"
@@ -29,8 +54,7 @@
         android:layout_height="600dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/DatePickerButton" />
-
+        app:layout_constraintTop_toBottomOf="@id/linearBtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

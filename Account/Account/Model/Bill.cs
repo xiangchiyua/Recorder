@@ -5,15 +5,15 @@ namespace Account.Model
 {
     public class Bill
     {
-        public int BillID { get; set; }
-        public string Type { get; set; }//采用Income与Expense！！！后面逻辑如此使用。
-        public Date DateTime { get; set; }
+        public int? BillID { get; set; }
+        public string? Type { get; set; }//采用Income与Expense！！！后面逻辑如此使用。
+        public DateTime DateTime { get; set; }
         public Category Category { get; set; }
-        public float Money { get; set; }
-        public int CateID { get; set; }
-        public string Remarks { get; set; }
+        public float? Money { get; set; }
+        public int? CateID { get; set; }
+        public string? Remarks { get; set; }
 
-        public Bill(string type, Date dateTime, float money, int cateID, string remarks)
+        public Bill(string type, DateTime dateTime, float money, int cateID, string remarks)
         {
             Type = type;
             DateTime = dateTime;

@@ -8,7 +8,7 @@ namespace Account.Dal
     {
         public long insertCategory(Category category)
         {
-            string sql = "INSERT INTO category(name,description) VALUES('@name','@description')";
+            string sql = "INSERT INTO category(name,description) VALUES(@name,@description)";
             return SqlHelper.ExecuteNonQuery(sql,
                 new SqlParameter[]
                 {

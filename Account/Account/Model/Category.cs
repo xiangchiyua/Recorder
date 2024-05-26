@@ -2,9 +2,9 @@
 {
     public class Category
     {
-        public int CateID { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public int? CateID { get; set; }
+        public string? Name { get; set; }
+        public string? Description { get; set; }
 
         public Category()
         {

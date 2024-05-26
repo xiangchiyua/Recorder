@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y/Tj8l1g2+5a6MHep54QnoDaeeGmeQgNU25Qyvj9aOfP+CGyKK6DUlJeo6kQ/Bq1eLyGanqGlaRbdwYyJERBPw==",
+  "dgSpecHash": "66OYVaFR+mj/cQ5VkmalHZ6VUaV4jw2PBiRJohPRNtrENhHf6RnH9STQG5+invu3vyGRORcGftcDLLOpFgw+mg==",
   "success": true,
-  "projectFilePath": "E:\\作业文件&笔记\\C#\\Account\\Account\\Account.csproj",
+  "projectFilePath": "D:\\code\\C#final\\Recorder\\Account\\Account\\Account.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\胥翔云\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\胥翔云\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

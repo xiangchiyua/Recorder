@@ -1,17 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\Account\\Account\\",
+  "WorkspaceRootPath": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|e:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\account\\account\\account\\model\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|d:\\code\\c#final\\recorder\\account-v2\\account\\account\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account-v2\\Account\\account\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account-v2\\Account\\account\\model\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\model\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|e:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\account\\account\\account\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account-v2\\Account\\account\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|e:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\account\\account\\account\\dal\\billdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account-v2\\Account\\account\\dal\\billdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\dal\\billdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -27,38 +35,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Account\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Account\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-26T15:22:01.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Program.cs",
+              "RelativeDocumentMoniker": "Account\\Program.cs",
+              "ToolTip": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Program.cs",
+              "RelativeToolTip": "Account\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T15:18:37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Bill.cs",
-              "DocumentMoniker": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\Account\\Account\\Account\\Model\\Bill.cs",
+              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Model\\Bill.cs",
               "RelativeDocumentMoniker": "Account\\Model\\Bill.cs",
-              "ToolTip": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\Account\\Account\\Account\\Model\\Bill.cs",
+              "ToolTip": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Model\\Bill.cs",
               "RelativeToolTip": "Account\\Model\\Bill.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAIwAEAAAACAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAxwAEAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-26T15:00:35.457Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "BillDal.cs",
-              "DocumentMoniker": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\Account\\Account\\Account\\Dal\\BillDal.cs",
+              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Dal\\BillDal.cs",
               "RelativeDocumentMoniker": "Account\\Dal\\BillDal.cs",
-              "ToolTip": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\Account\\Account\\Account\\Dal\\BillDal.cs",
+              "ToolTip": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Dal\\BillDal.cs",
               "RelativeToolTip": "Account\\Dal\\BillDal.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAIwDwAAAAUAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAIwFEAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-26T14:59:32.098Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AccountController.cs",
-              "DocumentMoniker": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\Account\\Account\\Account\\Controllers\\AccountController.cs",
+              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Account\\Controllers\\AccountController.cs",
-              "ToolTip": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\Account\\Account\\Account\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Account\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAADwvxYAAAAyAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-26T14:55:49.915Z",
               "EditorCaption": ""

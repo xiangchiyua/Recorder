@@ -191,7 +191,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[Account.Model.Bill, Account, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Account.Model.Bill",
         "MediaTypes": [
           "text/plain",
           "application/json",

@@ -11,9 +11,9 @@ namespace Account.Dal
         //private static string TABLE_NAME_BILL = "bill";
         //private static string TABLE_NAME_CATEGORY = "category";
 
-        public List<Bill> QueryFromBillByOther(int billID, int cateID, string type, float money, string choice)
+        public Bill QueryFromBillByOther(int billID, int cateID, string type, float money, string choice)
         {
-            List<Bill> bills = new List<Bill>();
+            //List<Bill> bills = new List<Bill>();
             string sql = null;
             if (choice == null)
             {
@@ -36,23 +36,24 @@ namespace Account.Dal
             DataRow row = null;
             DataTable res = SqlHelper.ExecuteTable(sql,
                 new SqlParameter("@billID", billID), new SqlParameter("@cateID", cateID),new SqlParameter("@type", type),new SqlParameter("@money", money));
+            Bill bill = new Bill();
             if (res.Rows.Count != 0)
             {
                 int num = res.Rows.Count;
-                while ((--num)>0)
+                while ((--num)>=0)
                 {
                     row = res.Rows[num];
-                    Bill bill = new Bill();
+                    
                     bill.BillID = (int)row["billID"];
                     bill.CateID = (int)row["cateID"];
-                    bill.Money = (float)row["money"];
+                    bill.Money = Convert.ToSingle(row["money"]);
                     bill.Remarks = row["remarks"].ToString();
                     bill.Type = row["type"].ToString();
                     bill.DateTime = (DateTime)row["dateTime"];
-                    bills.Add(bill);
+                    //bills.Add(bill);
                 }
             }
-            return bills;
+            return bill;
         }
 
         public List<Bill> QueryFromBillByDate(DateTime[] date)
@@ -67,13 +68,13 @@ namespace Account.Dal
             if (res.Rows.Count != 0)
             {
                 int num = res.Rows.Count;
-                while ((--num) > 0)
+                while ((--num) >= 0)
                 {
                     row = res.Rows[num];
                     Bill bill = new Bill();
                     bill.BillID = (int)row["billID"];
                     bill.CateID = (int)row["cateID"];
-                    bill.Money = (float)row["money"];
+                    bill.Money = Convert.ToSingle(row["money"]);
                     bill.Remarks = row["remarks"].ToString();
                     bill.Type = row["type"].ToString();
                     bill.DateTime = (DateTime)row["dateTime"];

@@ -13,27 +13,27 @@ namespace Account.Controllers
     public class AccountController : ControllerBase
     {
         [HttpGet]
-        public List<Bill> queryBillByOther(int billID, int cateID, string type, float money, string choice)
+        public ActionResult<Bill> queryBillByOther(int billID, int cateID, string type, float money, string choice)
         {
             BillDal billDal = new BillDal();
             return billDal.QueryFromBillByOther(billID,cateID,type,money,choice);
 
         }
         [HttpGet]
-        public List<Bill> queryBillByDate(DateTime[] Date)
+        public ActionResult<List<Bill>> queryBillByDate(DateTime[] Date)
         {
 
             BillDal billDal = new BillDal();
-            return billDal.QueryFromBillByDate(Date);
+            return billDal.QueryFromBillByDate(Date).ToList();
         }
         [HttpPost]
-        public long insertBill(Bill bill)
+        public ActionResult<long> insertBill(Bill bill)
         {
             BillDal billDal = new BillDal();   
             return billDal.InseryBill(bill);
         }
         [HttpPost]
-        public long insertCategory(Category category)
+        public ActionResult<long> insertCategory(Category category)
         {
             CategoryDal categoryDal = new CategoryDal();
             return categoryDal.insertCategory(category);
@@ -41,13 +41,13 @@ namespace Account.Controllers
         [HttpPost]
 
         [HttpDelete]
-        public long deleteFromBillByID(int id)
+        public ActionResult<long> deleteFromBillByID(int id)
         {
             BillDal billDal = new BillDal();
             return billDal.DeleteFromBillByID(id);
         }
         [HttpDelete]
-        public long deleteFromCategoryByName(string name)
+        public ActionResult<long> deleteFromCategoryByName(string name)
         {
             CategoryDal cateDal = new CategoryDal();
             return cateDal.DeleteCategoryByName(name);

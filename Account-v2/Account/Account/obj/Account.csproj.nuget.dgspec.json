@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\作业文件&笔记\\Account\\Account\\Account\\Account.csproj": {}
+    "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Account.csproj": {}
   },
   "projects": {
-    "E:\\作业文件&笔记\\Account\\Account\\Account\\Account.csproj": {
+    "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Account.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\作业文件&笔记\\Account\\Account\\Account\\Account.csproj",
+        "projectUniqueName": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Account.csproj",
         "projectName": "Account",
-        "projectPath": "E:\\作业文件&笔记\\Account\\Account\\Account\\Account.csproj",
+        "projectPath": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Account.csproj",
         "packagesPath": "C:\\Users\\胥翔云\\.nuget\\packages\\",
-        "outputPath": "E:\\作业文件&笔记\\Account\\Account\\Account\\obj\\",
+        "outputPath": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

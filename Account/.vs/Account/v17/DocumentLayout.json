@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "D:\\code\\C#final\\Recorder\\Account\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{763EF4D5-A7B6-4F46-98D8-2725DCD61750}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account\\account\\dal\\billdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{763EF4D5-A7B6-4F46-98D8-2725DCD61750}|Account\\Account.csproj|d:\\code\\c#final\\recorder\\account\\account\\dal\\billdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{763EF4D5-A7B6-4F46-98D8-2725DCD61750}|Account\\Account.csproj|solutionrelative:account\\dal\\billdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{763EF4D5-A7B6-4F46-98D8-2725DCD61750}|Account\\Account.csproj|solutionrelative:account\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{763EF4D5-A7B6-4F46-98D8-2725DCD61750}|Account\\Account.csproj|d:\\code\\c#final\\recorder\\account\\account\\core\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{763EF4D5-A7B6-4F46-98D8-2725DCD61750}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account\\account\\core\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{763EF4D5-A7B6-4F46-98D8-2725DCD61750}|Account\\Account.csproj|solutionrelative:account\\core\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -68,7 +68,7 @@
               "RelativeDocumentMoniker": "Account\\Dal\\BillDal.cs",
               "ToolTip": "D:\\code\\C#final\\Recorder\\Account\\Account\\Dal\\BillDal.cs",
               "RelativeToolTip": "Account\\Dal\\BillDal.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFcAAAB9AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T09:10:00.184Z",
               "EditorCaption": ""
@@ -95,8 +95,7 @@
               "RelativeToolTip": "Account\\Controllers\\AccountController.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAIwCAAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T08:46:58.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-25T08:46:58.157Z"
             },
             {
               "$type": "Document",
@@ -108,8 +107,7 @@
               "RelativeToolTip": "Account\\Core\\SqlHelper.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABsAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T08:26:19.86Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-25T08:26:19.86Z"
             },
             {
               "$type": "Document",

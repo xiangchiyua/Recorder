@@ -5,7 +5,7 @@ namespace Account.Core
 {
     public class SqlHelper
     {
-        public static string ConnectionString { get; set; } = "server=.;database=Account;uid=sa;pwd=root;Encrypt=True;TrustServerCertificate=True;";//连接字符串
+        public static string ConnectionString { get; set; } = "server=.;database=Account;uid=root;pwd=156278Lsk;Encrypt=True;TrustServerCertificate=True;";//连接字符串
 
         public static DataTable ExecuteTable(string cmdText,params SqlParameter[] sqlParameters)
         {

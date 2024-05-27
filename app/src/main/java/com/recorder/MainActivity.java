@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
-
     public void get(String getUrl){
         Request request=new Request.Builder().url(getUrl).build();
         client.newCall(request).enqueue(new Callback() {

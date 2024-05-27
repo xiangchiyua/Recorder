@@ -20,6 +20,7 @@ import com.recorder.databinding.FragmentHomeBinding;
 import com.recorder.R;
 import com.recorder.model.*;
 
+import java.util.Date;
 import java.util.zip.Inflater;
 
 public class HomeFragment extends Fragment {
@@ -47,20 +48,22 @@ public class HomeFragment extends Fragment {
         //日期选择的添加：
         Button btnBegin=root.findViewById(R.id.btnBegin);
         Button btnEnd=root.findViewById(R.id.btnEnd);
+        Date begin;
+        Date end;
         btnBegin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                DateDialogFragment dialogFragment = new DateDialogFragment();
-                dialogFragment.show(fragmentManager, "myDialog");
+                DateDialogFragment dialogBegin = new DateDialogFragment(btnBegin);
+                dialogBegin.show(fragmentManager, "myDialog");
             }
         });
         btnEnd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                DateDialogFragment dialogFragment = new DateDialogFragment();
-                dialogFragment.show(fragmentManager, "myDialog");
+                DateDialogFragment dialogEnd = new DateDialogFragment(btnEnd);
+                dialogEnd.show(fragmentManager, "myDialog");
             }
         });
         return root;

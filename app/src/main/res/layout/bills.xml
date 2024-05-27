@@ -2,6 +2,7 @@
 <GridLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bills"
     android:layout_width="match_parent"
     android:layout_height="170dp"
@@ -12,10 +13,10 @@
     android:padding="16dp"
     android:rowCount="3"
     android:useDefaultMargins="true"
-
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context="">
 
     <TextView
         android:layout_width="0dp"

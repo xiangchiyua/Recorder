@@ -1,5 +1,6 @@
 package com.recorder.ui.home;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.util.Log;
@@ -26,17 +28,23 @@ import java.util.zip.Inflater;
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
-    private void addBills(Bill[] bills){
-        LinearLayout linearLayout=getView().findViewById(R.id.linearbills);
-        for(int i=1;i<=5;i++){
-            String billId="biils"+Integer.toString(i);
+    private void addBills(Bill[] bills) {
+        LinearLayout linearLayout = getView().findViewById(R.id.linearbills);
+        for (int i = 1; i <= 5; i++) {
+            String billId = "bills" + Integer.toString(i);
             //Log.d("My", billId);
             //Log.d("My", Integer.toString(getResources().getIdentifier(billId,"id", getActivity().getPackageName())));
-            View billView=linearLayout.findViewById(
-                    getResources().getIdentifier(billId,"id", getActivity().getPackageName()));
-            TextView text=billView.findViewById(R.id.billName);
+            View billView = linearLayout.findViewById(
+                    getResources().getIdentifier(billId, "id", getActivity().getPackageName()));
+            TextView text = billView.findViewById(R.id.billName);
             text.setText(Integer.toString(i));
         }
+        //动态添加
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+        View newBillView = inflater.inflate(R.layout.bills, linearLayout, false);
+        TextView newText = newBillView.findViewById(R.id.billName);
+        newText.setText("傻逼");
+        linearLayout.addView(newBillView);
     }
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

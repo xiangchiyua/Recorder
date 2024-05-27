@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,41 +10,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="2dp">
+        android:padding="2dp"
+        android:divider="?android:attr/dividerVertical"
+        android:showDividers="middle"
+        android:dividerPadding="8dp">
 
         <include
-            android:id="@+id/biils1"
+            android:id="@+id/bills1"
             layout="@layout/bills"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp" />
+            android:layout_margin="0dp" />
 
         <include
-            android:id="@+id/biils2"
+            android:id="@+id/bills2"
             layout="@layout/bills"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp" />
+            android:layout_margin="0dp" />
 
         <include
-            android:id="@+id/biils3"
+            android:id="@+id/bills3"
             layout="@layout/bills"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp" />
+            android:layout_margin="0dp" />
 
         <include
-            android:id="@+id/biils4"
+            android:id="@+id/bills4"
             layout="@layout/bills"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp" />
+            android:layout_margin="0dp" />
 
         <include
-            android:id="@+id/biils5"
+            android:id="@+id/bills5"
             layout="@layout/bills"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp" />
+            android:layout_margin="0dp" />
     </LinearLayout>
 </ScrollView>

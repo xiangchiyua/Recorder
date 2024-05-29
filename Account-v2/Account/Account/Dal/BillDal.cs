@@ -2,6 +2,7 @@
 using Account.Model;
 using Microsoft.Data.SqlClient;
 using System.Data;
+using System.Globalization;
 //using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Account.Dal
@@ -56,10 +57,14 @@ namespace Account.Dal
             return bill;
         }
 
-        public List<Bill> QueryFromBillByDate(DateTime[] date)
+        public List<Bill> QueryFromBillByDate(DateTime startDate,string _endDate)
         {
-            DateTime startDate = date[0];
-            DateTime endDate = date[1];
+            //DateTime startDate = date[0];
+            //DateTime endDate = date[1];
+            DateTimeFormatInfo dtFormat = new DateTimeFormatInfo();
+            dtFormat.ShortDatePattern = "yyyy-MM-dd";
+            DateTime endDate  = Convert.ToDateTime(_endDate, dtFormat);
+
             List<Bill> bills = new List<Bill>();
             string sql = "SELECT * FROM bill WHERE dateTime >= @startDate AND dateTime <= @endDate";
             DataRow row = null;

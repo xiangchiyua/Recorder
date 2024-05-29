@@ -138,9 +138,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Date",
-        "Type": "System.DateTime[]",
-        "IsRequired": true
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [

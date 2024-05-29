@@ -20,11 +20,11 @@ namespace Account.Controllers
 
         }
         [HttpGet]
-        public ActionResult<List<Bill>> queryBillByDate(DateTime[] Date)
+        public ActionResult<List<Bill>> queryBillByDate(DateTime startDate,string endDate)
         {
 
             BillDal billDal = new BillDal();
-            return billDal.QueryFromBillByDate(Date).ToList();
+            return billDal.QueryFromBillByDate(startDate,endDate).ToList();
         }
         [HttpPost]
         public ActionResult<long> insertBill(Bill bill)

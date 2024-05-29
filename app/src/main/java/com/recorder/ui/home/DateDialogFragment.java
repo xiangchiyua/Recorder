@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.recorder.MainActivity;
@@ -60,5 +62,10 @@ public class DateDialogFragment extends DialogFragment implements DatePickerDial
         String selectedDate = year + "/" + month + "/" + day;
         btn.setText(selectedDate);
         dismiss();
+    }
+    public void onDismiss(DialogInterface dialog) {
+        super.onDismiss(dialog);
+        Fragment parentFragment = getParentFragment();
+        ((HomeFragment) parentFragment).onDialogDismiss();
     }
 }

@@ -36,6 +36,7 @@ import okio.BufferedSink;
 
 public class MainActivity extends AppCompatActivity {
     OkHttpClient client=new OkHttpClient();
+    String conn="https://localhost:7162/Account/";
     private ActivityMainBinding binding;
     
     @Override

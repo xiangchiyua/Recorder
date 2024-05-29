@@ -59,7 +59,7 @@ public class HomeFragment extends Fragment {
         btnBegin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentManager fragmentManager = getChildFragmentManager();
                 DateDialogFragment dialogBegin = new DateDialogFragment(btnBegin);
                 dialogBegin.show(fragmentManager, "myDialog");
             }
@@ -67,7 +67,7 @@ public class HomeFragment extends Fragment {
         btnEnd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentManager fragmentManager = getChildFragmentManager();
                 DateDialogFragment dialogEnd = new DateDialogFragment(btnEnd);
                 dialogEnd.show(fragmentManager, "myDialog");
             }
@@ -82,5 +82,13 @@ public class HomeFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+    public void onDialogDismiss(){
+        Log.d("my","onDialogDismiss");
+        TextView text=getView().findViewById(R.id.btnBegin);
+        if(!text.getText().toString().equals("起始时间")){
+            Log.d("my", text.getText().toString());
+        }
+        onResume();
     }
 }

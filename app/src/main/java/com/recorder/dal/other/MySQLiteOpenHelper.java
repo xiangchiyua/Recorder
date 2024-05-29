@@ -79,11 +79,11 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
 
         db.insert(TABLE_NAME_CATEGORY,null,values);
         ContentValues _values = new ContentValues();
-        values.put("type","expense");
-        values.put("dateTime","2024-5-30");
-        values.put("money","100");
-        values.put("cateID","1");
-        values.put("remarks","Just a try");
+        _values.put("type","expense");
+        _values.put("dateTime","2024-5-30");
+        _values.put("money","100");
+        _values.put("cateID","1");
+        _values.put("remarks","Just a try");
         db.insert(TABLE_NAME_BILL,null,_values);
     }
 

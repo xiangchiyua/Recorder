@@ -18,18 +18,21 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.recorder.api.MyApiService;
 import com.recorder.databinding.FragmentHomeBinding;
 import com.recorder.R;
 import com.recorder.model.*;
 
 import java.util.Date;
+import java.util.List;
 import java.util.zip.Inflater;
 
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
-    private void addBills(Bill[] bills) {
+    private void addBills(List<Bill> bills) {
         LinearLayout linearLayout = getView().findViewById(R.id.linearbills);
+        /*
         for (int i = 1; i <= 5; i++) {
             String billId = "bills" + Integer.toString(i);
             //Log.d("My", billId);
@@ -39,12 +42,33 @@ public class HomeFragment extends Fragment {
             TextView text = billView.findViewById(R.id.billName);
             text.setText(Integer.toString(i));
         }
+        */
         //动态添加
+        /*
         LayoutInflater inflater = LayoutInflater.from(getContext());
         View newBillView = inflater.inflate(R.layout.bills, linearLayout, false);
         TextView newText = newBillView.findViewById(R.id.billName);
         newText.setText("傻逼");
         linearLayout.addView(newBillView);
+
+         */
+        if(bills!=null) {
+            for (int i = 0; i < bills.size(); i++) {
+                LayoutInflater inflater = LayoutInflater.from(getContext());
+                View newBillView = inflater.inflate(R.layout.bills, linearLayout, false);
+                //Texts
+                TextView billID = newBillView.findViewById(R.id.billName);
+                billID.setText(bills.get(i).getBillID());
+                TextView billtype = newBillView.findViewById(R.id.billType);
+                billtype.setText(bills.get(i).getType());
+                TextView billMoney = newBillView.findViewById(R.id.billMoney);
+                billMoney.setText(Float.toString(bills.get(i).getMoney()));
+                TextView billTime = newBillView.findViewById(R.id.billCreateTime);
+                billTime.setText(bills.get(i).getDateTime().toString());
+
+                linearLayout.addView(newBillView);
+            }
+        }
     }
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -74,9 +98,12 @@ public class HomeFragment extends Fragment {
         });
         return root;
     }
+    public void onStart(){
+        super.onStart();
+        addBills(null);
+    }
     public void onResume() {
         super.onResume();
-        addBills(null);
     }
     @Override
     public void onDestroyView() {
@@ -84,11 +111,29 @@ public class HomeFragment extends Fragment {
         binding = null;
     }
     public void onDialogDismiss(){
-        Log.d("my","onDialogDismiss");
-        TextView text=getView().findViewById(R.id.btnBegin);
-        if(!text.getText().toString().equals("起始时间")){
-            Log.d("my", text.getText().toString());
+        String dateBegin,dateEnd;
+        TextView textBegin=getView().findViewById(R.id.btnBegin);
+        if(!textBegin.getText().toString().equals("起始时间")){
+            dateBegin=textBegin.getText().toString();
         }
+        else{
+            dateBegin="2000-01-01";
+        }
+        TextView textEnd=getView().findViewById(R.id.btnEnd);
+        if(!textEnd.getText().toString().equals("结束时间")){
+            dateEnd=textEnd.getText().toString();
+        }
+        else{
+            dateEnd="3000-01-01";
+        }
+        //api get
+        MyApiService api=new MyApiService();
+        String getUrl="queryBillByDate?";
+        getUrl+="startDate="+dateBegin;
+        getUrl+="&";
+        getUrl+="endDate="+dateEnd;
+        List<Bill> bills=api.get(getUrl);
+        addBills(bills);
         onResume();
     }
 }

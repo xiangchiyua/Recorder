@@ -48,6 +48,26 @@ public class AddbillsFragment extends Fragment {
             }
         });
 
+        Button btnAdd=root.findViewById(R.id.button_ensure);
+        TextView textType=root.findViewById(R.id.inputType);
+        TextView textMoney=root.findViewById(R.id.inputMoney);
+        TextView textYear=root.findViewById(R.id.inputYear);
+        TextView textMonth=root.findViewById(R.id.inputMonth);
+        TextView textDay=root.findViewById(R.id.inputDay);
+
+        String type= textType.getText().toString();
+        String money= textMoney.getText().toString();
+        String year= textYear.getText().toString();
+        String month= textMonth.getText().toString();
+        if(month.length()<2){
+            month="0"+month;
+        }
+        String day= textDay.getText().toString();
+        if(day.length()<2){
+            day="0"+day;
+        }
+        String date=year+"-"+month+"-"+day;
+
         //final TextView textView = binding.button;
         //addbillsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 

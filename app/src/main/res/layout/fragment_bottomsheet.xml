@@ -110,7 +110,7 @@
             android:padding="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/inputDate"
+                android:id="@+id/inputDay"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/borders"

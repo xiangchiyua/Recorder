@@ -12,4 +12,32 @@ public class Bill {
     private float money;
     private int cateID;
     private String remarks;
+
+    public int getBillID() {
+        return billID;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public Date getDateTime() {
+        return dateTime;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public float getMoney() {
+        return money;
+    }
+
+    public int getCateID() {
+        return cateID;
+    }
+
+    public String getRemarks() {
+        return remarks;
+    }
 }

@@ -132,8 +132,8 @@ public class HomeFragment extends Fragment {
         getUrl+="startDate="+dateBegin;
         getUrl+="&";
         getUrl+="endDate="+dateEnd;
-        List<Bill> bills=api.get(getUrl);
-        addBills(bills);
+        //List<Bill> bills=api.get(getUrl);
+        //addBills(bills);
         onResume();
     }
 }

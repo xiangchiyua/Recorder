@@ -107,7 +107,6 @@
             android:layout_height="wrap_content"
             android:background="@drawable/borders"
             android:hint="备注"
-            android:inputType="date"
             android:minWidth="200dp"
             android:textAlignment="center"
             android:textSize="16dp" />

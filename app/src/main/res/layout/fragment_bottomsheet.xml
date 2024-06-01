@@ -80,7 +80,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/fillings"
-                android:layout_width="100dp"
+                android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/borders"
                 android:inputType="number"
@@ -92,7 +92,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         android:layout_width="wrap_content"
-        android:minWidth="330dp"
+        android:minWidth="290dp"
         android:layout_height="wrap_content"
         android:minHeight="86dp"
         android:paddingBottom="8dp"

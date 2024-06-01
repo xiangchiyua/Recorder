@@ -28,6 +28,7 @@ public class BottomSheet extends BottomSheetDialogFragment {
         TextView textType=view.findViewById(R.id.inputType);
         TextView textMoney=view.findViewById(R.id.inputMoney);
         TextView textRemark=view.findViewById(R.id.inputRemark);
+
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,6 +58,8 @@ public class BottomSheet extends BottomSheetDialogFragment {
                 }
             }
         });
+
+
         return view;
     }
 }

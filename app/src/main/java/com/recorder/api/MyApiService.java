@@ -5,6 +5,7 @@ import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.recorder.model.Bill;
 
@@ -24,11 +25,10 @@ import okhttp3.ResponseBody;
 
 public class MyApiService extends AppCompatActivity {
     OkHttpClient client=new OkHttpClient();
-    String conn="https://localhost:7162/Account/";
+    String conn="http://59.110.13.7/myapp/Account/";
     List<Bill>res;
     public List<Bill> get(String getUrl){
         Request request=new Request.Builder().url(conn+getUrl).build();
-        Log.d("my", conn+getUrl);
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
@@ -41,13 +41,20 @@ public class MyApiService extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Log.d("my", "running");
-                        Gson gson=new Gson();
+                        String json;
+                        Gson gson=new GsonBuilder()
+                                .setDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+                                .create();
                         ResponseBody responsebody=response.body();
-                        if(responsebody!=null){
-                            Type listType = new TypeToken<List<Bill>>(){}.getType();
-                            res = gson.fromJson(responsebody.toString(), listType);
+                        try {
+                            json=responsebody.string();
+                            //Log.d("my", json);
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
                         }
+                        Type listType = new TypeToken<List<Bill>>(){}.getType();
+                        res = gson.fromJson(json, listType);
+
                     }
                 });
             }

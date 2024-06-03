@@ -54,7 +54,7 @@ public class BottomSheet extends BottomSheetDialogFragment {
                     dialog.show();
                 }
                 else{
-                    Log.d("my", "nm");
+                    //Log.d("my", "nm");
                 }
             }
         });

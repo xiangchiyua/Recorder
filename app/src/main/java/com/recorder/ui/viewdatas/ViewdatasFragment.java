@@ -35,12 +35,12 @@ public class ViewdatasFragment extends Fragment {
         viewDatasViewModel.setAAData1(new Object[]{7.0, 6.9, 9.5, 14.5, 18.2, 16.0, 13.8});
         AAChartView aaChartView1=root.findViewById(R.id.aaChartView1);
         aaChartView1.aa_drawChartWithChartModel(viewDatasViewModel.aaChartModel1);
-        Log.d("My","cnm");
+        //Log.d("My","cnm");
 
         viewDatasViewModel.setAAData2(new Object[]{7.0, 6.9, 9.5, 14.5, 18.2, 16.0, 13.8});
         AAChartView aaChartView2=root.findViewById(R.id.aaChartView2);
         aaChartView2.aa_drawChartWithChartModel(viewDatasViewModel.aaChartModel2);
-        Log.d("My","cnm");
+        //Log.d("My","cnm");
         return root;
     }
     @Override

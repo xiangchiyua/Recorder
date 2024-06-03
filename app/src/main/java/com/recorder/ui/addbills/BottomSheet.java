@@ -47,6 +47,9 @@ public class BottomSheet extends BottomSheetDialogFragment {
                     builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
+                            String type=textType.getText().toString();
+                            String money=textMoney.getText().toString();
+                            String remark=textRemark.getText().toString();
 
                         }
                     });

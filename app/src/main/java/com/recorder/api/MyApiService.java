@@ -12,17 +12,21 @@ import com.recorder.model.Bill;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.FormBody;
+import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
+
+import org.json.JSONObject;
 
 public class MyApiService extends AppCompatActivity {
     OkHttpClient client=new OkHttpClient();
@@ -62,16 +66,26 @@ public class MyApiService extends AppCompatActivity {
         });
         return res;
     }
-    public void post(String postUrl,String type,String money,String remark){
-        FormBody formBody=new FormBody.Builder()
-                .addEncoded("type", URLEncoder.encode(type))
-                .add("money",money)
-                .add("cateID","1")
-                .addEncoded("remark",URLEncoder.encode(remark))
-                .build();
+    public void post(String postUrl,String type,String money,String remarks){
+        MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("type", type);
+            jsonObject.put("money", money);
+            jsonObject.put("cateID", 1);
+            jsonObject.put("remarks", remarks);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        String json = jsonObject.toString();
+        Log.d("my", json);
+        RequestBody body = RequestBody.create(JSON,json);
+
         Request request=new Request.Builder()
                 .url(conn+postUrl)
-                .post(formBody)
+                .post(body)
                 .build();
         client.newCall(request).enqueue(new Callback() {
             @Override
@@ -85,7 +99,12 @@ public class MyApiService extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Log.d("my", "run");
+                        ResponseBody responseBody=response.body();
+                        try {
+                            Log.d("my", response.body().string());
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
                     }
                 });
             }

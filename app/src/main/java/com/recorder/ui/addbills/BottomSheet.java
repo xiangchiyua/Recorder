@@ -56,12 +56,10 @@ public class BottomSheet extends BottomSheetDialogFragment {
                     dialog.show();
                 }
                 else{
-                    Log.d("my", "insert");
                     String type=textType.getText().toString();
                     String money=textMoney.getText().toString();
-                    String remark=textRemark.getText().toString();
-                    api.post("insertBill",type,money,remark);
-                    Log.d("my", "1");
+                    String remarks=textRemark.getText().toString();
+                    api.post("insertBill",type,money,remarks);
                     dismiss();
                 }
             }

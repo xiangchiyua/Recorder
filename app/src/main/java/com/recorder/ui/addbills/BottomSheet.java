@@ -17,10 +17,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
+
+import com.recorder.api.MyApiService;
 import com.recorder.databinding.FragmentAddbillsBinding;
 import com.recorder.R;
 
 public class BottomSheet extends BottomSheetDialogFragment {
+    MyApiService api=new MyApiService();
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_bottomsheet, container, false);
 
@@ -47,17 +50,19 @@ public class BottomSheet extends BottomSheetDialogFragment {
                     builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            String type=textType.getText().toString();
-                            String money=textMoney.getText().toString();
-                            String remark=textRemark.getText().toString();
-
                         }
                     });
                     AlertDialog dialog = builder.create();
                     dialog.show();
                 }
                 else{
-                    //Log.d("my", "nm");
+                    Log.d("my", "insert");
+                    String type=textType.getText().toString();
+                    String money=textMoney.getText().toString();
+                    String remark=textRemark.getText().toString();
+                    api.post("insertBill",type,money,remark);
+                    Log.d("my", "1");
+                    dismiss();
                 }
             }
         });

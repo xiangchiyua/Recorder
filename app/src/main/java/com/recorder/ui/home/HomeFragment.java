@@ -127,7 +127,7 @@ public class HomeFragment extends Fragment {
         String dateBegin,dateEnd;
         TextView textBegin=getView().findViewById(R.id.btnBegin);
 
-        Log.d("my", textBegin.getText().toString());
+        //Log.d("my", textBegin.getText().toString());
         if(!textBegin.getText().toString().equals("起始时间")){
             dateBegin=textBegin.getText().toString();
         }
@@ -136,7 +136,7 @@ public class HomeFragment extends Fragment {
         }
         TextView textEnd=getView().findViewById(R.id.btnEnd);
 
-        Log.d("my", textEnd.getText().toString());
+        //Log.d("my", textEnd.getText().toString());
         if(!textEnd.getText().toString().equals("结束时间")){
             dateEnd=textEnd.getText().toString();
         }
@@ -149,6 +149,7 @@ public class HomeFragment extends Fragment {
         getUrl+="&";
         getUrl+="endDate="+dateEnd;
         List<Bill> bills=api.get(getUrl);
+        /*
         if(bills==null){
             Log.d("my", "cnm");
         }
@@ -157,6 +158,8 @@ public class HomeFragment extends Fragment {
                 Log.d("my", bill.toString());
             }
         }
+
+         */
         //Log.d("my", bills.toString());
         addBills(bills);
         onResume();

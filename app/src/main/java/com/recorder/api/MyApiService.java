@@ -11,6 +11,7 @@ import com.recorder.model.Bill;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -61,15 +62,22 @@ public class MyApiService extends AppCompatActivity {
         });
         return res;
     }
-    public void post(String postUrl){
-        RequestBody requestBody=new FormBody.Builder()
-                .add("key_name","value")
+    public void post(String postUrl,String type,String money,String remark){
+        FormBody formBody=new FormBody.Builder()
+                .addEncoded("type", URLEncoder.encode(type))
+                .add("money",money)
+                .add("cateID","1")
+                .addEncoded("remark",URLEncoder.encode(remark))
                 .build();
-        Request request=new Request.Builder().url(conn+postUrl).post(requestBody).build();
+        Request request=new Request.Builder()
+                .url(conn+postUrl)
+                .post(formBody)
+                .build();
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
                 e.printStackTrace();
+                Log.d("my", e.toString());
             }
 
             @Override
@@ -77,7 +85,7 @@ public class MyApiService extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-
+                        Log.d("my", "run");
                     }
                 });
             }

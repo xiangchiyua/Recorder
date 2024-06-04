@@ -40,13 +40,10 @@ public class ViewdatasViewModel extends ViewModel {
                                 .borderWidth(2f)
                                 .allowPointSelect(false)
                                 .data(new Object[][]{
-                                    {"a",object[0]},
-                                    {"b",object[1]},
-                                    {"c",object[2]},
-                                    {"d",object[3]},
-                                    {"e",object[4]},
-                                    {"f",object[5]},
-                                    {"g",object[6]}
+                                    {"饮食",object[0]},
+                                    {"住宿",object[1]},
+                                    {"出行",object[2]},
+                                    {"购物",object[3]}
                                 })
                 });
     }

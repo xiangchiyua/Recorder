@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.util.Log;
@@ -72,6 +73,8 @@ public class HomeFragment extends Fragment {
                 Date date=bills.get(i).dateTime;
                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
                 billTime.setText(dateFormat.format(date));
+
+                ImageView iv=newBillView.findViewById(R.id.imageView);
                 linearLayout.addView(newBillView);
             }
         }

@@ -1,5 +1,7 @@
 package com.recorder.ui.addbills;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -37,20 +39,58 @@ public class AddbillsFragment extends Fragment {
 
         binding = FragmentAddbillsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        //Log.d("My", "cnm");
-        //Log.d("My", Integer.toString(getResources().getIdentifier("button_add","id", getActivity().getPackageName())));
         Button button = root.findViewById(R.id.button_add);
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showBottomSheetDialog();
+                //showBottomSheetDialog();
+                BottomSheet bottomSheet=new BottomSheet();
+                bottomSheet.show(getChildFragmentManager(),"BottomSheet");
             }
         });
+        /*
+        Log.d("my", "555");
+        Button btnAdd=root.findViewById(R.id.button_ensure);
+        TextView textType=root.findViewById(R.id.inputType);
+        TextView textMoney=root.findViewById(R.id.inputMoney);
+        TextView textRemark=root.findViewById(R.id.inputRemark);
+        Log.d("my", "666");
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(textType.getText()!=null||textMoney.getText()==null||textRemark.getText()==null){
+                    AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                    builder.setTitle("警告");
+                    builder.setMessage("信息不能为空");
+                    builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
 
+                        }
+                    });
+                    builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    });
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                }
+                else{
+
+                }
+            }
+        });
+        Log.d("my", "777");
+        */
+        /*
+        String type= textType.getText().toString();
+        String money= textMoney.getText().toString();
+        String remark= textRemark.getText().toString();
+         */
         //final TextView textView = binding.button;
         //addbillsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-
         return root;
     }
 

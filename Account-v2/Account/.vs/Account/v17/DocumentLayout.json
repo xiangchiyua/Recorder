@@ -1,0 +1,166 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\account\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|e:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\c#\\account-v2\\account\\account\\model\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\model\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\account\\dal\\billdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\dal\\billdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\account\\model\\statistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\model\\statistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\account\\model\\merchant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\model\\merchant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\account\\model\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\model\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\account\\core\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\core\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\account\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\account\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Category.cs",
+              "DocumentMoniker": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\Account\\Model\\Category.cs",
+              "RelativeDocumentMoniker": "Account\\Model\\Category.cs",
+              "ToolTip": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\Account\\Model\\Category.cs",
+              "RelativeToolTip": "Account\\Model\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T16:36:49.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\Account\\Program.cs",
+              "RelativeDocumentMoniker": "Account\\Program.cs",
+              "ToolTip": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\Account\\Program.cs",
+              "RelativeToolTip": "Account\\Program.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAcwCAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T15:18:37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Bill.cs",
+              "DocumentMoniker": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\Account\\Model\\Bill.cs",
+              "RelativeDocumentMoniker": "Account\\Model\\Bill.cs",
+              "ToolTip": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\Account\\Model\\Bill.cs",
+              "RelativeToolTip": "Account\\Model\\Bill.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T15:00:35.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\Account\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Account\\Controllers\\AccountController.cs",
+              "ToolTip": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\Account\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Account\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAF4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T14:55:49.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Merchant.cs",
+              "DocumentMoniker": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\Account\\Model\\Merchant.cs",
+              "RelativeDocumentMoniker": "Account\\Model\\Merchant.cs",
+              "ToolTip": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\Account\\Model\\Merchant.cs",
+              "RelativeToolTip": "Account\\Model\\Merchant.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T16:36:54.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Statistic.cs",
+              "DocumentMoniker": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\Account\\Model\\Statistic.cs",
+              "RelativeDocumentMoniker": "Account\\Model\\Statistic.cs",
+              "ToolTip": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\Account\\Model\\Statistic.cs",
+              "RelativeToolTip": "Account\\Model\\Statistic.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T16:36:54.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\Account\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Account\\Properties\\launchSettings.json",
+              "ToolTip": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\Account\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Account\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-26T15:22:01.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SqlHelper.cs",
+              "DocumentMoniker": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\Account\\Core\\SqlHelper.cs",
+              "RelativeDocumentMoniker": "Account\\Core\\SqlHelper.cs",
+              "ToolTip": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\Account\\Core\\SqlHelper.cs",
+              "RelativeToolTip": "Account\\Core\\SqlHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T11:24:11.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BillDal.cs",
+              "DocumentMoniker": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\Account\\Dal\\BillDal.cs",
+              "RelativeDocumentMoniker": "Account\\Dal\\BillDal.cs",
+              "ToolTip": "E:\\\u4F5C\u4E1A\u6587\u4EF6\u0026\u7B14\u8BB0\\C#\\Account-v2\\Account\\Account\\Dal\\BillDal.cs",
+              "RelativeToolTip": "Account\\Dal\\BillDal.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAwEIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T14:59:32.098Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

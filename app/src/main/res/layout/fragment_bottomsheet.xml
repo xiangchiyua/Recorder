@@ -1,34 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
     tools:context=".ui.addbills.AddbillsFragment"
-    app:cardCornerRadius="16dp">
+    android:background="@drawable/borders">
+
     <GridLayout
         android:id="@+id/addbills"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:alignmentMode="alignMargins"
-        android:background="@drawable/borders"
-        android:padding="16dp"
+
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
         android:rowCount="5"
-        android:useDefaultMargins="true">
+        android:useDefaultMargins="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/button_ensure"
             android:layout_width="98dp"
-            android:layout_height="72dp"
+            android:layout_height="60dp"
             android:layout_row="0"
             android:layout_column="2"
             android:layout_gravity="center"
             android:background="@drawable/ripple"
             android:text="确定"
-            android:textSize="25dp" />
+            android:textSize="16dp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLeft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -42,7 +50,7 @@
                 android:background="@drawable/borders"
                 android:hint="类型"
                 android:textAlignment="center"
-                android:textSize="25dp" />
+                android:textSize="16dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -58,69 +66,49 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/borders"
                 android:hint="金额"
-                android:textAlignment="center"
                 android:inputType="number"
-                android:textSize="25dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="2"
-            android:layout_column="0"
-            android:padding="8dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/inputYear"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/borders"
-                android:hint="年份"
                 android:textAlignment="center"
-                android:inputType="date"
-                android:textSize="25dp" />
+                android:textSize="16dp" />
         </com.google.android.material.textfield.TextInputLayout>
-
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="2"
+            android:layout_row="1"
             android:layout_column="1"
-            android:padding="8dp">
+            android:padding="8dp"
+            android:visibility="invisible">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/inputMonth"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/fillings"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
                 android:background="@drawable/borders"
-                android:hint="月份"
+                android:inputType="number"
                 android:textAlignment="center"
-                android:inputType="date"
-                android:textSize="25dp" />
+                android:textSize="16dp" />
         </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="2"
-            android:layout_column="2"
-            android:padding="8dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/inputDate"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/borders"
-                android:hint="日期"
-                android:textAlignment="center"
-                android:inputType="date"
-                android:textSize="25dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
     </GridLayout>
 
-</androidx.cardview.widget.CardView>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="wrap_content"
+        android:minWidth="290dp"
+        android:layout_height="wrap_content"
+        android:minHeight="86dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addbills">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputRemark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/borders"
+            android:hint="备注"
+            android:minWidth="200dp"
+            android:textAlignment="center"
+            android:textSize="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

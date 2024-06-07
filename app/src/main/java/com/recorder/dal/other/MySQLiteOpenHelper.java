@@ -62,11 +62,29 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_TABLE_BILL);
         db.execSQL(CREATE_TABLE_CATEGORY);
         db.execSQL(CREATE_TABLE_MERCHANT);
+        init();
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
+    }
+
+    public void init(){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("cateID","1");
+        values.put("name","try");
+        values.put("description","JUST A TRY");
+
+        db.insert(TABLE_NAME_CATEGORY,null,values);
+        ContentValues _values = new ContentValues();
+        _values.put("type","expense");
+        _values.put("dateTime","2024-5-30");
+        _values.put("money","100");
+        _values.put("cateID","1");
+        _values.put("remarks","Just a try");
+        db.insert(TABLE_NAME_BILL,null,_values);
     }
 
     //增删改查

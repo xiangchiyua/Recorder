@@ -2,6 +2,7 @@
     <string name="app_name">recorder</string>
     <string name="title_home">Home</string>
     <string name="content_addbills">添加账单</string>
-    <string name="title_addbills">cnm</string>
-    <string name="title_viewdatas">View datas</string>
+    <string name="title_addbills">Add Bill</string>
+    <string name="title_viewdatas">最近七天数据统计</string>
+    <string name="navi_viewdatas">View Datas</string>
 </resources>

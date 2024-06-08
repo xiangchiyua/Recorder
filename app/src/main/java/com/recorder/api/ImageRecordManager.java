@@ -4,8 +4,11 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -15,7 +18,9 @@ import com.recorder.api.*;
 
 public class ImageRecordManager {
     private static final String PREFS_NAME = "ImageRecordPrefs";
-    private static final String KEY_IMAGE_PATHS = ScreenshotUtils.getScreenshotsPath();
+    private static final String KEY_IMAGE_PATHS = "saved_image_paths";
+
+    public String imagePath=Environment.getDataDirectory()+"/DCIM/Screenshots";
 
     private Context context;
     private SharedPreferences sharedPreferences;
@@ -38,7 +43,8 @@ public class ImageRecordManager {
         return sharedPreferences.getStringSet(KEY_IMAGE_PATHS, new HashSet<>());
     }
     // 获取当前设备中的所有图片路径
-    private Set<String> getCurrentImagePaths() {
+    /*
+    public Set<String> getCurrentImagePaths() {
         Set<String> imagePaths = new HashSet<>();
         Uri uri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
         String[] projection = {MediaStore.Images.Media.DATA};
@@ -53,6 +59,26 @@ public class ImageRecordManager {
             cursor.close();
         }
         return imagePaths;
+    }
+     */
+    public Set<String> getCurrentImagePaths() {
+        Set<String> screenshotPaths = new HashSet<>();
+        //Log.d("my", imagePath);
+        File screenshotDir = new File(imagePath);
+
+        if (screenshotDir.exists() && screenshotDir.isDirectory()) {
+            File[] files = screenshotDir.listFiles();
+            if (files != null) {
+                for (File file : files) {
+                    if (file.isFile() && (file.getName().endsWith(".png") || file.getName().endsWith(".jpg"))) {
+                        screenshotPaths.add(file.getAbsolutePath());
+                    }
+                }
+            }
+        } else {
+            Log.d("my", "Screenshot directory does not exist or is not a directory.");
+        }
+        return screenshotPaths;
     }
     //获取新增图片列表
     public List<String> getNewImagePaths() {

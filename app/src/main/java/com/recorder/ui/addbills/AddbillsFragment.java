@@ -127,8 +127,9 @@ public class AddbillsFragment extends Fragment {
         binding = null;
     }
     public void uploadImages(){
-        Log.d("my", ScreenshotUtils.getScreenshotsPath());
+        //Log.d("my", ScreenshotUtils.getScreenshotsPath());
         imageRecordManager= new ImageRecordManager(getActivity());
+        Log.d("my",imageRecordManager.imagePath);
         // 获取新增的图片并显示
         List<String> newImages = imageRecordManager.getNewImagePaths();
         if (!newImages.isEmpty()) {

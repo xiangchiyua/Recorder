@@ -7,6 +7,7 @@ public class ScreenshotUtils {
 
     // 获取可能的截屏路径
     public static String getScreenshotsPath() {
+        /*
         // 尝试获取不同的可能路径
         String[] possiblePaths = {
                 Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getAbsolutePath() + "/Screenshots",
@@ -22,6 +23,9 @@ public class ScreenshotUtils {
 
         // 如果没有找到截屏路径，返回默认的图片路径
         return Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getAbsolutePath() + "/Screenshots";
+
+         */
+        return "手机存储/DCIM/Screenshots";
     }
 }
 

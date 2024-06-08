@@ -63,26 +63,28 @@ namespace Account.Controllers
             }
         }
         [HttpPost]
-        public ActionResult<long> insertBillByImage(BillImage billImage)
+        public ActionResult<long> insertBillByImage(string billImage)
         {
             Bill bill = new Bill();
             bill.CateID = 1;
-            bill.BillID = billImage.BillID;
-            try
-            {
-                Bill ocr = OcrHelper.OcrImage(billImage.Image);
+            //bill.BillID = billImage.BillID;
+            //try
+            //{
+                Bill ocr = OcrHelper.OcrImage(billImage);
                 bill.Type = "Expense";
-                bill.DateTime = ocr.DateTime;
+                //bill.DateTime = ocr.DateTime;
                 bill.Money = ocr.Money;
                 bill.Remarks = ocr.Remarks;
-                _logger.LogInformation(bill.toString());
-            }
-            catch (Exception ex)
+                //_logger.LogInformation(bill.toString());
+                BillDal billDal = new BillDal();
+                return billDal.InseryBill(bill);
+            //}
+            /*catch (Exception ex)
             {
                 _logger.LogError(ex, "Error ocr bill image");
-                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
-            }
-            try
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error_image");
+            }*/
+            /*try
             {
 
                 BillDal billDal = new BillDal();
@@ -92,7 +94,7 @@ namespace Account.Controllers
             {
                 _logger.LogError(ex, "Error inserting bill");
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
-            }
+            }*/
         }
 
         [HttpPost]

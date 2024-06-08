@@ -105,6 +105,32 @@
   },
   {
     "ContainingType": "Account.Controllers.AccountController",
+    "Method": "insertBillByImage",
+    "RelativePath": "Account/insertBillByImage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "billImage",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int64",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Account.Controllers.AccountController",
     "Method": "insertCategory",
     "RelativePath": "Account/insertCategory",
     "HttpMethod": "POST",

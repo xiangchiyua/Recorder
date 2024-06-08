@@ -8,15 +8,17 @@ namespace Account.Core
     {
         private static string API_KEY = "zEiQFdvdFBd8vXuzUPdKwQXw";
         private static string SECRET_KEY = "O2jst4mIun13Od5Xzbo5AwKxR28Jn38U";
-        public static Bill OcrImage(string image)
+        public static Bill OcrImage(string imagePath)
         {
+            // Convert image to Base64 string
+            string imageBase64 = ImageHelper.ConvertImageToBase64(imagePath);
 
             var client = new RestClient($"https://aip.baidubce.com/rest/2.0/ocr/v1/general?access_token={GetAccessToken()}");
             client.Timeout = -1;
             var request = new RestRequest(Method.POST);
             request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
             request.AddHeader("Accept", "application/json");
-            request.AddParameter("image", image);
+            request.AddParameter("image", imageBase64);
             request.AddParameter("detect_direction", "false");
             request.AddParameter("detect_language", "false");
             request.AddParameter("vertexes_location", "false");
@@ -37,7 +39,6 @@ namespace Account.Core
             {
                 if (wordsList[i] == "当前状态")
                 {
-                    // -10.00
                     var data = wordsList[i - 1];
                     data = data.Replace("-", "");
                     float.TryParse(data, out float number);
@@ -45,7 +46,6 @@ namespace Account.Core
                 }
                 if (wordsList[i] == "支付时间")
                 {
-                    // 2024年6月5日21：52：56
                     var data = wordsList[i + 1];
                     data = data.Replace("：", ":");
                     string format = "yyyy年M月d日HH:mm:ss";
@@ -60,9 +60,7 @@ namespace Account.Core
                 }
                 if (wordsList[i] == "商品")
                 {
-
                     bill.Remarks = wordsList[i + 1];
-
                 }
             }
             return bill;

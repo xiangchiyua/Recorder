@@ -24,10 +24,10 @@ namespace Account.Controllers
             try
             {
                 BillDal billDal = new BillDal();
-                var result =  billDal.QueryFromBillByOther(billID,cateID,type,money,choice);
+                var result = billDal.QueryFromBillByOther(billID, cateID, type, money, choice);
                 return result;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 _logger.LogError(ex, "Error querying bill by other");
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
@@ -35,12 +35,12 @@ namespace Account.Controllers
 
         }
         [HttpGet]
-        public ActionResult<List<Bill>> queryBillByDate(DateTime startDate,string endDate)
+        public ActionResult<List<Bill>> queryBillByDate(DateTime startDate, string endDate)
         {
             try
             {
-                  BillDal billDal = new BillDal();
-                  return billDal.QueryFromBillByDate(startDate,endDate).ToList();
+                BillDal billDal = new BillDal();
+                return billDal.QueryFromBillByDate(startDate, endDate).ToList();
             }
             catch (Exception ex)
             {
@@ -53,15 +53,48 @@ namespace Account.Controllers
         {
             try
             {
-                BillDal billDal = new BillDal();   
+                BillDal billDal = new BillDal();
                 return billDal.InseryBill(bill);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 _logger.LogError(ex, "Error inserting bill");
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
+        [HttpPost]
+        public ActionResult<long> insertBillByImage(BillImage billImage)
+        {
+            Bill bill = new Bill();
+            bill.CateID = 1;
+            bill.BillID = billImage.BillID;
+            try
+            {
+                Bill ocr = OcrHelper.OcrImage(billImage.Image);
+                bill.Type = "Expense";
+                bill.DateTime = ocr.DateTime;
+                bill.Money = ocr.Money;
+                bill.Remarks = ocr.Remarks;
+                _logger.LogInformation(bill.toString());
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error ocr bill image");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
+            try
+            {
+
+                BillDal billDal = new BillDal();
+                return billDal.InseryBill(bill);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error inserting bill");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
+        }
+
         [HttpPost]
         public ActionResult<long> insertCategory(Category category)
         {
@@ -107,6 +140,6 @@ namespace Account.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
-        
+
     }
 }

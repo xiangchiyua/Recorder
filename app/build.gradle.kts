@@ -48,6 +48,7 @@ dependencies {
     implementation("com.github.AAChartModel:AAChartCore-Kotlin:7.2.0")
     implementation("com.squareup.retrofit2:retrofit:2.4.0")
     implementation("com.squareup.retrofit2:converter-gson:2.4.0")
+    implementation(files("libs/commons-net-3.11.0.jar"))
     implementation(libs.firebase.crashlytics.buildtools)
     implementation(libs.json)
     testImplementation(libs.junit)

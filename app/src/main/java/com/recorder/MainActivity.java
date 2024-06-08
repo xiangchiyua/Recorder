@@ -1,6 +1,8 @@
 package com.recorder;
 
 import android.app.DownloadManager;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,6 +39,7 @@ import okio.BufferedSink;
 public class MainActivity extends AppCompatActivity {
     OkHttpClient client=new OkHttpClient();
     String conn="https://localhost:7162/Account/";
+
     private ActivityMainBinding binding;
     
     @Override
@@ -55,47 +58,5 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
-    }
-
-    public void get(String getUrl){
-        Request request=new Request.Builder().url(getUrl).build();
-        client.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                e.printStackTrace();
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-
-                    }
-                });
-            }
-        });
-    }
-    public void post(String postUrl){
-        RequestBody requestBody=new FormBody.Builder()
-                .add("key_name","value")
-                .build();
-        Request request=new Request.Builder().url(postUrl).post(requestBody).build();
-        client.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                e.printStackTrace();
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-
-                    }
-                });
-            }
-        });
     }
 }

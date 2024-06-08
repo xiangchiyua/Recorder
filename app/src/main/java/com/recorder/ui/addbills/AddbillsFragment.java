@@ -1,7 +1,9 @@
 package com.recorder.ui.addbills;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -22,10 +24,20 @@ import com.recorder.databinding.FragmentAddbillsBinding;
 import com.recorder.R;
 import com.recorder.ui.addbills.BottomSheet;
 
+import java.util.List;
+import java.util.Set;
+import com.recorder.api.*;
+
 public class AddbillsFragment extends Fragment {
 
     private FragmentAddbillsBinding binding;
     private TextView textView;
+    private static final String PREFS_NAME = "SwitchPrefs";
+    private static final String SWITCH_STATE_KEY = "SwitchState";
+    private Switch mySwitch;
+    private SharedPreferences sharedPreferences;
+    private ftpHelper ftp=new ftpHelper();
+    ImageRecordManager imageRecordManager;
     private void showBottomSheetDialog(){
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(requireContext());
         View bottomSheetView = getLayoutInflater().inflate(R.layout.fragment_bottomsheet, null);
@@ -84,13 +96,28 @@ public class AddbillsFragment extends Fragment {
         });
         Log.d("my", "777");
         */
-        /*
-        String type= textType.getText().toString();
-        String money= textMoney.getText().toString();
-        String remark= textRemark.getText().toString();
-         */
-        //final TextView textView = binding.button;
-        //addbillsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
+
+        mySwitch = root.findViewById(R.id.switchAutoBill);
+        sharedPreferences =getActivity().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        // 恢复Switch状态
+        boolean switchState = sharedPreferences.getBoolean(SWITCH_STATE_KEY, false);
+        mySwitch.setChecked(switchState);
+
+        // 设置Switch状态改变监听器
+        mySwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // 保存Switch状态
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean(SWITCH_STATE_KEY, isChecked);
+                editor.apply();
+            }
+        });
+
+        if(switchState){
+            uploadImages();
+        }
         return root;
     }
 
@@ -98,5 +125,22 @@ public class AddbillsFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+    public void uploadImages(){
+        Log.d("my", ScreenshotUtils.getScreenshotsPath());
+        imageRecordManager= new ImageRecordManager(getActivity());
+        // 获取新增的图片并显示
+        List<String> newImages = imageRecordManager.getNewImagePaths();
+        if (!newImages.isEmpty()) {
+            for (String imagePath : newImages) {
+                ftp.uploadFile(imagePath);
+                Log.d("my", "uploadImages sucess");
+            }
+        } else {
+            Log.d("my","no changes");
+        }
+
+        // 保存当前图片列表以备下次启动时使用
+        imageRecordManager.saveCurrentImagePaths();
     }
 }

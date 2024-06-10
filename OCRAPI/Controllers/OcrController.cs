@@ -9,7 +9,7 @@ namespace BaiduOcrApi.Controllers
     public class OcrController : ControllerBase
     {
         private readonly BaiduOcrService _baiduOcrService;
-        private readonly string _fixedDirectoryPath = "D:/OCRimg"; // 更改为固定目录路径
+        private readonly string _fixedDirectoryPath = "/var/ftp/lively/jpgs"; // 更改为固定目录路径
 
         public OcrController(BaiduOcrService baiduOcrService)
         {

@@ -116,7 +116,7 @@ public class AddbillsFragment extends Fragment {
         });
 
         if(switchState){
-            uploadImages();
+            //uploadImages();
         }
         return root;
     }
@@ -129,19 +129,21 @@ public class AddbillsFragment extends Fragment {
     public void uploadImages(){
         //Log.d("my", ScreenshotUtils.getScreenshotsPath());
         imageRecordManager= new ImageRecordManager(getActivity());
-        Log.d("my",imageRecordManager.imagePath);
+        //Log.d("my",imageRecordManager.imagePath);
+        Set<String> nowImages=imageRecordManager.getCurrentImagePaths();
         // 获取新增的图片并显示
-        List<String> newImages = imageRecordManager.getNewImagePaths();
-        if (!newImages.isEmpty()) {
-            for (String imagePath : newImages) {
-                ftp.uploadFile(imagePath);
-                Log.d("my", "uploadImages sucess");
+        //List<String> newImages = imageRecordManager.getNewImagePaths();
+        if (!nowImages.isEmpty()) {
+            for (String imagePath : nowImages) {
+                Log.d("my", imagePath);
+                //ftp.uploadFile(imagePath);
+                //Log.d("my", "uploadImages sucess");
             }
         } else {
-            Log.d("my","no changes");
+            //Log.d("my","no changes");
         }
 
         // 保存当前图片列表以备下次启动时使用
-        imageRecordManager.saveCurrentImagePaths();
+        //imageRecordManager.saveCurrentImagePaths();
     }
 }

@@ -9,6 +9,7 @@ import com.github.aachartmodel.aainfographics.aachartcreator.AAChartType;
 import com.github.aachartmodel.aainfographics.aachartcreator.AASeriesElement;
 
 import java.lang.reflect.Array;
+import java.util.Date;
 
 public class ViewdatasViewModel extends ViewModel {
 
@@ -29,7 +30,7 @@ public class ViewdatasViewModel extends ViewModel {
     public void setAAData1(Object[] object){
         aaChartModel1 = new AAChartModel()
                 .chartType(AAChartType.Pie)
-                .title("pie chart")
+                .title("花费种类统计")
                 .dataLabelsEnabled(false)
                 //.yAxisGridLineWidth(0f)
                 .legendEnabled(false)
@@ -50,11 +51,11 @@ public class ViewdatasViewModel extends ViewModel {
     public void setAAData2(Object[] object){
         aaChartModel2 = new AAChartModel()
                 .chartType(AAChartType.Area)
-                .title("area chart")
-                .categories(new String[]{"Jan", "Feb", "Mar", "Apr", "May"})
+                .title("每天花费统计")
+                .categories(new String[]{"1","2","3","4","5","6","7"})
                 .series(new AASeriesElement[]{
                         new AASeriesElement()
-                                .name("Tokyo")
+                                .name("Date")
                                 .data(object)
                 });
     }

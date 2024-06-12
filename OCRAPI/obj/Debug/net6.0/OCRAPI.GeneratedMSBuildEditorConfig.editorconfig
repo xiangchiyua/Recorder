@@ -9,37 +9,39 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OCRAPI
 build_property.RootNamespace = OCRAPI
-build_property.ProjectDir = D:\重要文件\大二下\作业\软件架构基础\test\OCRAPI\
+build_property.ProjectDir = E:\Android\projects\Recorder\OCRAPI\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\重要文件\大二下\作业\软件架构基础\test\OCRAPI
+build_property.MSBuildProjectDirectory = E:\Android\projects\Recorder\OCRAPI
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/重要文件/大二下/作业/软件架构基础/test/OCRAPI/Views/Home/Index.cshtml]
+[E:/Android/projects/Recorder/OCRAPI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/重要文件/大二下/作业/软件架构基础/test/OCRAPI/Views/Home/Privacy.cshtml]
+[E:/Android/projects/Recorder/OCRAPI/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/重要文件/大二下/作业/软件架构基础/test/OCRAPI/Views/Shared/Error.cshtml]
+[E:/Android/projects/Recorder/OCRAPI/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/重要文件/大二下/作业/软件架构基础/test/OCRAPI/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/Android/projects/Recorder/OCRAPI/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/重要文件/大二下/作业/软件架构基础/test/OCRAPI/Views/_ViewImports.cshtml]
+[E:/Android/projects/Recorder/OCRAPI/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/重要文件/大二下/作业/软件架构基础/test/OCRAPI/Views/_ViewStart.cshtml]
+[E:/Android/projects/Recorder/OCRAPI/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/重要文件/大二下/作业/软件架构基础/test/OCRAPI/Views/Shared/_Layout.cshtml]
+[E:/Android/projects/Recorder/OCRAPI/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-a1vy4yn2fj

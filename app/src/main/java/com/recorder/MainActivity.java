@@ -1,9 +1,16 @@
 package com.recorder;
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.media.projection.MediaProjection;
+import android.media.projection.MediaProjectionManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,17 +21,20 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.recorder.api.*;
 import com.recorder.databinding.ActivityMainBinding;
 import com.recorder.R;
 import com.recorder.ui.home.HomeFragment;
 
 import java.io.IOException;
+import java.util.Set;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -41,7 +51,9 @@ public class MainActivity extends AppCompatActivity {
     String conn="https://localhost:7162/Account/";
 
     private ActivityMainBinding binding;
-    
+    private SharedPreferences sharedPreferences;
+    private static final String PREFS_NAME = "SwitchPrefs";
+    private static final String SWITCH_STATE_KEY = "SwitchState";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,5 +70,60 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+        //startActivityForResult(projectionManager.createScreenCaptureIntent(), REQUEST_CODE);
+
+        sharedPreferences =this.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        // 恢复Switch状态
+        boolean switchState = sharedPreferences.getBoolean(SWITCH_STATE_KEY, false);
+
+        if(switchState){
+            Log.d("my", "true");
+            PermissionUtils.requestStoragePermission(this);
+        }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == PermissionUtils.REQUEST_STORAGE_PERMISSION) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // 权限被授予，可以继续执行需要权限的操作
+                ImageRecordManager imageRecordManager = new ImageRecordManager(this);
+                Set<String> paths=imageRecordManager.getCurrentImagePaths();
+                for(String path:paths){
+                    Log.d("my", path);
+                }
+                // 其他操作
+            } else {
+                // 权限被拒绝，显示解释对话框
+                if (shouldShowRequestPermissionRationale(android.Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                    showPermissionExplanationDialog();
+                } else {
+                    // 用户选择了不再提示
+                    Log.d("my", "Storage Permission Denied");
+                    //showSettingsDialog();
+                }
+            }
+        }
+    }
+    private void showPermissionExplanationDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle("Storage Permission Needed")
+                .setMessage("This app needs the storage permission to access your screenshots. Please grant the permission.")
+                .setPositiveButton("Grant", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // 重新请求权限
+                        PermissionUtils.requestStoragePermission(MainActivity.this);
+                        //requestPermissions(new String[]{android.Manifest.permission.READ_EXTERNAL_STORAGE}, PermissionUtils.REQUEST_STORAGE_PERMISSION);
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .create()
+                .show();
     }
 }

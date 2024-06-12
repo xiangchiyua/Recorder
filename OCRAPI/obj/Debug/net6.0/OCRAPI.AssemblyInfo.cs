@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OCRAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c188dd690d1458235370fe7371779c89aaad30fa")]
 [assembly: System.Reflection.AssemblyProductAttribute("OCRAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OCRAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,5 +1,6 @@
 package com.recorder.api;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -20,7 +21,7 @@ public class ImageRecordManager {
     private static final String PREFS_NAME = "ImageRecordPrefs";
     private static final String KEY_IMAGE_PATHS = "saved_image_paths";
 
-    public String imagePath=Environment.getDataDirectory()+"/DCIM/Screenshots";
+    public String imagePath=Environment.getExternalStorageDirectory()+"/DCIM/Screenshots";
 
     private Context context;
     private SharedPreferences sharedPreferences;
@@ -28,6 +29,13 @@ public class ImageRecordManager {
     public ImageRecordManager(Context context) {
         this.context = context;
         this.sharedPreferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        // 检查并请求权限
+
+        if (!PermissionUtils.hasStoragePermission((Activity) context)) {
+            PermissionUtils.requestStoragePermission((Activity) context);
+        }
+
+
     }
 
     // 保存当前图片列表
@@ -63,17 +71,24 @@ public class ImageRecordManager {
      */
     public Set<String> getCurrentImagePaths() {
         Set<String> screenshotPaths = new HashSet<>();
-        //Log.d("my", imagePath);
+        Log.d("my", imagePath);
         File screenshotDir = new File(imagePath);
 
         if (screenshotDir.exists() && screenshotDir.isDirectory()) {
             File[] files = screenshotDir.listFiles();
+            Log.d("my", "6");
             if (files != null) {
+                Log.d("my", "6");
                 for (File file : files) {
+                    Log.d("my",file.getAbsolutePath() );
                     if (file.isFile() && (file.getName().endsWith(".png") || file.getName().endsWith(".jpg"))) {
                         screenshotPaths.add(file.getAbsolutePath());
+                        Log.d("my",file.getAbsolutePath() );
                     }
                 }
+            }
+            else {
+                Log.d("my", "null");
             }
         } else {
             Log.d("my", "Screenshot directory does not exist or is not a directory.");

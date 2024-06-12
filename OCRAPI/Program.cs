@@ -1,4 +1,6 @@
 using BaiduOcrApi.Services;
+using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
 
 namespace OCRAPI
 {
@@ -36,7 +38,7 @@ namespace OCRAPI
 
 
             var builder = WebApplication.CreateBuilder(args);
-
+            builder.WebHost.UseUrls("http://*:5555");
             builder.Services.AddControllers();
             builder.Services.AddScoped<BaiduOcrService>(sp => new BaiduOcrService("fCvgehIJP6msJmDRxB4eNkEy", "QxocsqjZ59fWc0hW4F8jXbKSQSr5565T"));
 

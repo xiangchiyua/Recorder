@@ -65,11 +65,11 @@ namespace Account.Controllers
         [HttpPost]
         public ActionResult<long> insertBillByImage(string billImage)
         {
-            Bill bill = new Bill();
-            bill.CateID = 1;
-            //bill.BillID = billImage.BillID;
-            //try
-            //{
+            if (System.IO.File.Exists(billImage))
+            {
+                Bill bill = new Bill();
+                bill.CateID = 1;
+                
                 Bill ocr = OcrHelper.OcrImage(billImage);
                 bill.Type = "Expense";
                 //bill.DateTime = ocr.DateTime;
@@ -78,23 +78,13 @@ namespace Account.Controllers
                 //_logger.LogInformation(bill.toString());
                 BillDal billDal = new BillDal();
                 return billDal.InseryBill(bill);
-            //}
-            /*catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error ocr bill image");
-                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error_image");
-            }*/
-            /*try
-            {
-
-                BillDal billDal = new BillDal();
-                return billDal.InseryBill(bill);
+                
             }
-            catch (Exception ex)
+            else
             {
-                _logger.LogError(ex, "Error inserting bill");
-                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
-            }*/
+                _logger.LogError("File does not exist: " + billImage);
+                return StatusCode(StatusCodes.Status500InternalServerError, "File does not exist");
+            }
         }
 
         [HttpPost]

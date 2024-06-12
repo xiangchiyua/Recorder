@@ -100,6 +100,16 @@ namespace Account.Dal
                     new SqlParameter("@remarks",bill.Remarks),new SqlParameter("@type",bill.Type),new SqlParameter("@dateTime",bill.DateTime)
                 });
         }
+        public long InsertBill(Bill bill)
+        {
+            string sql = "INSERT INTO bill(cateID,money,remarks,type,dateTime) VALUES(@cateID,@money,@remarks,@type,@dateTime)";
+            return SqlHelper.ExecuteNonQuery(sql,
+                new SqlParameter[]
+                {
+                    new SqlParameter("@cateID",bill.CateID),new SqlParameter("@money",bill.Money),
+                    new SqlParameter("@remarks",bill.Remarks),new SqlParameter("@type",bill.Type),new SqlParameter("@dateTime",bill.DateTime)
+                });
+        }
 
         public long DeleteFromBillByID(int id)
         {

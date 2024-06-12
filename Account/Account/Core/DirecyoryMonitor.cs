@@ -23,7 +23,7 @@ namespace Account.Core
         {
             FileSystemWatcher watcher = new FileSystemWatcher();
             watcher.Path = _path;
-            watcher.Filter = "*.jpg"; // Assuming we're watching for JPG images
+            watcher.Filter = "*.jpg"; //watching for JPG images
             watcher.Created += OnNewFileCreated;
             watcher.EnableRaisingEvents = true;
         }

@@ -2509,23 +2509,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lsk15\\.nuget\\packages\\": {},
-    "E:\\Program Files\\VisualStudio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\胥翔云\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Android\\projects\\Recorder\\Account-v2\\Account\\Account\\Account.csproj",
+      "projectUniqueName": "D:\\code\\C#final\\Recorder\\Account\\Account\\Account.csproj",
       "projectName": "Account",
-      "projectPath": "E:\\Android\\projects\\Recorder\\Account-v2\\Account\\Account\\Account.csproj",
-      "packagesPath": "C:\\Users\\lsk15\\.nuget\\packages\\",
-      "outputPath": "E:\\Android\\projects\\Recorder\\Account-v2\\Account\\Account\\obj\\",
+      "projectPath": "D:\\code\\C#final\\Recorder\\Account\\Account\\Account.csproj",
+      "packagesPath": "C:\\Users\\胥翔云\\.nuget\\packages\\",
+      "outputPath": "D:\\code\\C#final\\Recorder\\Account\\Account\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "E:\\Program Files\\VisualStudio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\lsk15\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\胥翔云\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2533,9 +2533,8 @@
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages": {},
-        "C:\\Users\\lsk15\\.nuget\\packages": {},
-        "https://nuget.cdn.azure.cn/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -2547,6 +2546,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2581,24 +2585,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.26, 6.0.26]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -2607,7 +2593,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

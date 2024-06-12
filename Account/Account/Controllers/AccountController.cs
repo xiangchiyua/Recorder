@@ -71,13 +71,13 @@ namespace Account.Controllers
                 bill.CateID = 1;
                 
                 Bill ocr = OcrHelper.OcrImage(billImage);
-                bill.Type = "Expense";
-                //bill.DateTime = ocr.DateTime;
+                bill.Type = "饮食";
+                bill.DateTime = ocr.DateTime;
                 bill.Money = ocr.Money;
                 bill.Remarks = ocr.Remarks;
                 //_logger.LogInformation(bill.toString());
                 BillDal billDal = new BillDal();
-                return billDal.InseryBill(bill);
+                return billDal.InsertBill(bill);
                 
             }
             else

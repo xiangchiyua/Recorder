@@ -18,7 +18,7 @@ namespace Account
             var logger = loggerFactory.CreateLogger<DirectoryMonitor>();
 
             // Replace here
-            DirectoryMonitor monitor = new DirectoryMonitor("E:/picture", logger);
+            DirectoryMonitor monitor = new DirectoryMonitor("/var/ftp/lively/bills/", logger);
             monitor.Start();
             /**/
 

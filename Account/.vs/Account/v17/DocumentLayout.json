@@ -1,57 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\",
+  "WorkspaceRootPath": "D:\\code\\C#final\\Recorder\\Account\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|d:\\code\\c#final\\recorder\\account-v2\\account\\account\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|d:\\code\\c#final\\recorder\\account\\account\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account-v2\\Account\\account\\core\\direcyorymonitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\core\\direcyorymonitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account-v2\\Account\\account\\core\\filewatcherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\core\\filewatcherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account-v2\\Account\\account\\core\\ocrhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\core\\ocrhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account-v2\\Account\\account\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account-v2\\Account\\account\\core\\imagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\core\\imagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account-v2\\Account\\account\\core\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account\\account\\core\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\core\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account-v2\\Account\\account\\dal\\billdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account\\account\\core\\ocrhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\core\\ocrhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account\\account\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account\\account\\core\\direcyorymonitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\core\\direcyorymonitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account\\account\\core\\imagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\core\\imagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account\\account\\dal\\billdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\dal\\billdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account-v2\\Account\\account\\model\\merchant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account\\account\\model\\merchant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\model\\merchant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account-v2\\Account\\account\\model\\statistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account\\account\\model\\statistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\model\\statistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account-v2\\Account\\account\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account\\account\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account-v2\\Account\\account\\model\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account\\account\\model\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\model\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account-v2\\Account\\account\\model\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|D:\\code\\C#final\\Recorder\\Account\\account\\model\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA2DBE17-2D6B-434D-B7B8-BB44A85D50ED}|Account\\Account.csproj|solutionrelative:account\\model\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -62,63 +58,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "DirecyoryMonitor.cs",
-              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Core\\DirecyoryMonitor.cs",
+              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account\\Account\\Core\\DirecyoryMonitor.cs",
               "RelativeDocumentMoniker": "Account\\Core\\DirecyoryMonitor.cs",
-              "ToolTip": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Core\\DirecyoryMonitor.cs",
+              "ToolTip": "D:\\code\\C#final\\Recorder\\Account\\Account\\Core\\DirecyoryMonitor.cs",
               "RelativeToolTip": "Account\\Core\\DirecyoryMonitor.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAAwCEAAABJAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAADwvxkAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T16:43:23.986Z"
+              "WhenOpened": "2024-06-10T16:43:23.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account\\Account\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Account\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\code\\C#final\\Recorder\\Account\\Account\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Account\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAUwEoAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T14:55:49.915Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Statistic.cs",
-              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Model\\Statistic.cs",
-              "RelativeDocumentMoniker": "Account\\Model\\Statistic.cs",
-              "ToolTip": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Model\\Statistic.cs",
-              "RelativeToolTip": "Account\\Model\\Statistic.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T16:36:54.907Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FileWatcherService.cs",
-              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Core\\FileWatcherService.cs",
-              "RelativeDocumentMoniker": "Account\\Core\\FileWatcherService.cs",
-              "ToolTip": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Core\\FileWatcherService.cs",
-              "RelativeToolTip": "Account\\Core\\FileWatcherService.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAQwEEAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T06:14:52.9Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Account\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Account\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAUwEcAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T14:55:49.915Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Properties\\launchSettings.json",
+              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account\\Account\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Account\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\code\\C#final\\Recorder\\Account\\Account\\Properties\\launchSettings.json",
               "RelativeToolTip": "Account\\Properties\\launchSettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -126,48 +100,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "BillDal.cs",
-              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Dal\\BillDal.cs",
+              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account\\Account\\Dal\\BillDal.cs",
               "RelativeDocumentMoniker": "Account\\Dal\\BillDal.cs",
-              "ToolTip": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Dal\\BillDal.cs",
+              "ToolTip": "D:\\code\\C#final\\Recorder\\Account\\Account\\Dal\\BillDal.cs",
               "RelativeToolTip": "Account\\Dal\\BillDal.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAArwGUAAAAJAAAA",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAowGoAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T14:59:32.098Z"
+              "WhenOpened": "2024-05-26T14:59:32.098Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "ImageHelper.cs",
-              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Core\\ImageHelper.cs",
+              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account\\Account\\Core\\ImageHelper.cs",
               "RelativeDocumentMoniker": "Account\\Core\\ImageHelper.cs",
-              "ToolTip": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Core\\ImageHelper.cs",
+              "ToolTip": "D:\\code\\C#final\\Recorder\\Account\\Account\\Core\\ImageHelper.cs",
               "RelativeToolTip": "Account\\Core\\ImageHelper.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T14:00:37.824Z"
+              "WhenOpened": "2024-06-08T14:00:37.824Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Program.cs",
+              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account\\Account\\Program.cs",
               "RelativeDocumentMoniker": "Account\\Program.cs",
-              "ToolTip": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Program.cs",
+              "ToolTip": "D:\\code\\C#final\\Recorder\\Account\\Account\\Program.cs",
               "RelativeToolTip": "Account\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABSAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-26T15:18:37Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Merchant.cs",
-              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Model\\Merchant.cs",
+              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account\\Account\\Model\\Merchant.cs",
               "RelativeDocumentMoniker": "Account\\Model\\Merchant.cs",
-              "ToolTip": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Model\\Merchant.cs",
+              "ToolTip": "D:\\code\\C#final\\Recorder\\Account\\Account\\Model\\Merchant.cs",
               "RelativeToolTip": "Account\\Model\\Merchant.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -175,35 +151,49 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "SqlHelper.cs",
-              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Core\\SqlHelper.cs",
+              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account\\Account\\Core\\SqlHelper.cs",
               "RelativeDocumentMoniker": "Account\\Core\\SqlHelper.cs",
-              "ToolTip": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Core\\SqlHelper.cs",
+              "ToolTip": "D:\\code\\C#final\\Recorder\\Account\\Account\\Core\\SqlHelper.cs",
               "RelativeToolTip": "Account\\Core\\SqlHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAACQAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAABtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T11:24:11.086Z"
+              "WhenOpened": "2024-05-29T11:24:11.086Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "OcrHelper.cs",
-              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Core\\OcrHelper.cs",
+              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account\\Account\\Core\\OcrHelper.cs",
               "RelativeDocumentMoniker": "Account\\Core\\OcrHelper.cs",
-              "ToolTip": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Core\\OcrHelper.cs",
+              "ToolTip": "D:\\code\\C#final\\Recorder\\Account\\Account\\Core\\OcrHelper.cs",
               "RelativeToolTip": "Account\\Core\\OcrHelper.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAB9AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T13:47:30.426Z"
+              "WhenOpened": "2024-06-08T13:47:30.426Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 8,
+              "Title": "Statistic.cs",
+              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account\\Account\\Model\\Statistic.cs",
+              "RelativeDocumentMoniker": "Account\\Model\\Statistic.cs",
+              "ToolTip": "D:\\code\\C#final\\Recorder\\Account\\Account\\Model\\Statistic.cs",
+              "RelativeToolTip": "Account\\Model\\Statistic.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T16:36:54.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Bill.cs",
-              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Model\\Bill.cs",
+              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account\\Account\\Model\\Bill.cs",
               "RelativeDocumentMoniker": "Account\\Model\\Bill.cs",
-              "ToolTip": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Model\\Bill.cs",
+              "ToolTip": "D:\\code\\C#final\\Recorder\\Account\\Account\\Model\\Bill.cs",
               "RelativeToolTip": "Account\\Model\\Bill.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -211,11 +201,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "Category.cs",
-              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Model\\Category.cs",
+              "DocumentMoniker": "D:\\code\\C#final\\Recorder\\Account\\Account\\Model\\Category.cs",
               "RelativeDocumentMoniker": "Account\\Model\\Category.cs",
-              "ToolTip": "D:\\code\\C#final\\Recorder\\Account-v2\\Account\\Account\\Model\\Category.cs",
+              "ToolTip": "D:\\code\\C#final\\Recorder\\Account\\Account\\Model\\Category.cs",
               "RelativeToolTip": "Account\\Model\\Category.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

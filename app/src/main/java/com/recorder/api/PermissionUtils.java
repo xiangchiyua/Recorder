@@ -1,5 +1,6 @@
 package com.recorder.api;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -11,13 +12,21 @@ import com.recorder.MainActivity;
 
 public class PermissionUtils {
     public static final int REQUEST_STORAGE_PERMISSION = 1;
+    public static final int REQUEST_FTP_PERMISSION = 2;
 
     public static boolean hasStoragePermission(Activity activity) {
-        return ContextCompat.checkSelfPermission(activity, android.Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+        return ContextCompat.checkSelfPermission(activity, Manifest.permission.READ_MEDIA_IMAGES) == PackageManager.PERMISSION_GRANTED;
     }
 
     public static void requestStoragePermission(Activity activity) {
-        ActivityCompat.requestPermissions(activity, new String[]{android.Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_STORAGE_PERMISSION);
+        ActivityCompat.requestPermissions(activity, new String[]{android.Manifest.permission.READ_MEDIA_IMAGES}, REQUEST_STORAGE_PERMISSION);
+    }
+    public static boolean hasFTPPermission(Activity activity) {
+        return ContextCompat.checkSelfPermission(activity, Manifest.permission.INTERNET) == PackageManager.PERMISSION_GRANTED;
+    }
+
+    public static void requestFTPPermission(Activity activity) {
+        ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.INTERNET}, REQUEST_FTP_PERMISSION);
     }
     /*
     private void showPermissionExplanationDialog() {

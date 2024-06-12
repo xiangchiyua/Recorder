@@ -114,10 +114,11 @@ public class AddbillsFragment extends Fragment {
                 editor.apply();
             }
         });
-
+        /*
         if(switchState){
             //uploadImages();
         }
+        */
         return root;
     }
 
@@ -135,7 +136,7 @@ public class AddbillsFragment extends Fragment {
         //List<String> newImages = imageRecordManager.getNewImagePaths();
         if (!nowImages.isEmpty()) {
             for (String imagePath : nowImages) {
-                Log.d("my", imagePath);
+                //Log.d("my", imagePath);
                 //ftp.uploadFile(imagePath);
                 //Log.d("my", "uploadImages sucess");
             }

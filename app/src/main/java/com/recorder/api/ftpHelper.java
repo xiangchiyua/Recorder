@@ -12,7 +12,7 @@ public class ftpHelper {
     int port=21;
     String user="vwp";
     String pass="123456";
-    String uploadPath="jpgs/";
+    String uploadPath="bills/";
     public boolean uploadFile(String filePath) {
         FTPClient ftpClient = new FTPClient();
         boolean success = false;

@@ -71,19 +71,14 @@ public class ImageRecordManager {
      */
     public Set<String> getCurrentImagePaths() {
         Set<String> screenshotPaths = new HashSet<>();
-        Log.d("my", imagePath);
         File screenshotDir = new File(imagePath);
 
         if (screenshotDir.exists() && screenshotDir.isDirectory()) {
             File[] files = screenshotDir.listFiles();
-            Log.d("my", "6");
             if (files != null) {
-                Log.d("my", "6");
                 for (File file : files) {
-                    Log.d("my",file.getAbsolutePath() );
                     if (file.isFile() && (file.getName().endsWith(".png") || file.getName().endsWith(".jpg"))) {
                         screenshotPaths.add(file.getAbsolutePath());
-                        Log.d("my",file.getAbsolutePath() );
                     }
                 }
             }

@@ -1,5 +1,6 @@
 package com.recorder;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DownloadManager;
@@ -34,6 +35,7 @@ import com.recorder.R;
 import com.recorder.ui.home.HomeFragment;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Set;
 
 import okhttp3.Call;
@@ -49,6 +51,8 @@ import okio.BufferedSink;
 public class MainActivity extends AppCompatActivity {
     OkHttpClient client=new OkHttpClient();
     String conn="https://localhost:7162/Account/";
+    //ImageRecordManager imageRecordManager=new ImageRecordManager(this);
+    ftpHelper ftp=new ftpHelper();
 
     private ActivityMainBinding binding;
     private SharedPreferences sharedPreferences;
@@ -77,10 +81,66 @@ public class MainActivity extends AppCompatActivity {
         boolean switchState = sharedPreferences.getBoolean(SWITCH_STATE_KEY, false);
 
         if(switchState){
-            Log.d("my", "true");
-            PermissionUtils.requestStoragePermission(this);
+            Log.d("my", "uploading");
+            if(!PermissionUtils.hasStoragePermission(this)){
+                Log.d("my", "don't has storage permission");
+                try {
+                    //PermissionUtils.requestStoragePermission(this);
+                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_MEDIA_IMAGES}, PermissionUtils.REQUEST_STORAGE_PERMISSION);
+                }
+                catch (Exception e){
+                    //Log.d("my", e.getMessage());
+                }
+            }
+            else{
+                Log.d("my","has storage permission");
+            }
+            if(!PermissionUtils.hasFTPPermission(this)){
+                Log.d("my", "don't has ftp permission");
+                try {
+                    //PermissionUtils.requestStoragePermission(this);
+                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.INTERNET}, PermissionUtils.REQUEST_FTP_PERMISSION);
+                }
+                catch (Exception e){
+                    //Log.d("my", e.getMessage());
+                }
+            }
+            else{
+                Log.d("my","has ftp permission");
+            }
+            uploadImages();
         }
+
+
     }
+
+    public void uploadImages(){
+        ImageRecordManager imageRecordManager=new ImageRecordManager(this);
+        //Log.d("my", ScreenshotUtils.getScreenshotsPath());
+        //Log.d("my",imageRecordManager.imagePath);
+        //Set<String> nowImages=imageRecordManager.getCurrentImagePaths();
+        // 获取新增的图片并显示
+        List<String> newImages = imageRecordManager.getNewImagePaths();
+        if (!newImages.isEmpty()) {
+            for (String imagePath : newImages) {
+                Log.d("my", imagePath);
+                try {
+                    //ftp.uploadFile(imagePath);
+                    Log.d("my", "uploadImages sucess");
+                }catch (Exception e){
+                    Log.d("my",e.getMessage());
+                }
+            }
+        } else {
+            Log.d("my","no changes");
+        }
+
+        // 保存当前图片列表以备下次启动时使用
+        imageRecordManager.saveCurrentImagePaths();
+    }
+
+
+
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -90,12 +150,28 @@ public class MainActivity extends AppCompatActivity {
                 ImageRecordManager imageRecordManager = new ImageRecordManager(this);
                 Set<String> paths=imageRecordManager.getCurrentImagePaths();
                 for(String path:paths){
-                    Log.d("my", path);
+                    //Log.d("my", path);
                 }
                 // 其他操作
             } else {
                 // 权限被拒绝，显示解释对话框
-                if (shouldShowRequestPermissionRationale(android.Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                if (shouldShowRequestPermissionRationale(Manifest.permission.READ_MEDIA_IMAGES)) {
+                    showPermissionExplanationDialog();
+                } else {
+                    // 用户选择了不再提示
+                    Log.d("my", "Storage Permission Denied");
+                    //showSettingsDialog();
+                }
+            }
+        }
+        else if(requestCode == PermissionUtils.REQUEST_FTP_PERMISSION) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // 权限被授予，可以继续执行需要权限的操作
+                Log.d("my", "internet permission get");
+                // 其他操作
+            } else {
+                // 权限被拒绝，显示解释对话框
+                if (shouldShowRequestPermissionRationale(Manifest.permission.INTERNET)) {
                     showPermissionExplanationDialog();
                 } else {
                     // 用户选择了不再提示
@@ -105,6 +181,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+
     private void showPermissionExplanationDialog() {
         new AlertDialog.Builder(this)
                 .setTitle("Storage Permission Needed")

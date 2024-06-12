@@ -81,7 +81,8 @@ public class MainActivity extends AppCompatActivity {
         boolean switchState = sharedPreferences.getBoolean(SWITCH_STATE_KEY, false);
 
         if(switchState){
-            Log.d("my", "uploading");
+            Log.d("my", "getting permissions");
+            //获取截屏访问权限
             if(!PermissionUtils.hasStoragePermission(this)){
                 Log.d("my", "don't has storage permission");
                 try {
@@ -89,12 +90,13 @@ public class MainActivity extends AppCompatActivity {
                     ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_MEDIA_IMAGES}, PermissionUtils.REQUEST_STORAGE_PERMISSION);
                 }
                 catch (Exception e){
-                    //Log.d("my", e.getMessage());
+                    Log.d("my", e.getMessage());
                 }
             }
             else{
                 Log.d("my","has storage permission");
             }
+            //获取ftp权限
             if(!PermissionUtils.hasFTPPermission(this)){
                 Log.d("my", "don't has ftp permission");
                 try {
@@ -102,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                     ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.INTERNET}, PermissionUtils.REQUEST_FTP_PERMISSION);
                 }
                 catch (Exception e){
-                    //Log.d("my", e.getMessage());
+                    Log.d("my", e.getMessage());
                 }
             }
             else{
@@ -125,10 +127,9 @@ public class MainActivity extends AppCompatActivity {
             for (String imagePath : newImages) {
                 Log.d("my", imagePath);
                 try {
-                    //ftp.uploadFile(imagePath);
-                    Log.d("my", "uploadImages sucess");
+                    ftp.uploadFile(imagePath);
                 }catch (Exception e){
-                    Log.d("my",e.getMessage());
+                    Log.d("my","Error" + e);
                 }
             }
         } else {

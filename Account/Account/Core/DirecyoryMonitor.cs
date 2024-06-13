@@ -41,12 +41,14 @@ namespace Account.Core
             {
                 //string billImage = File.ReadAllBytes(filePath);
                 // Call the insertBillByImage method here
+                //Thread.Sleep(5000);
                 AccountController controller = new AccountController(new LoggerFactory().CreateLogger<AccountController>());
                 controller.insertBillByImage(filePath);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, $"Error processing file: {filePath}");
+                //_logger.LogInformation("");
             }
         }
     }

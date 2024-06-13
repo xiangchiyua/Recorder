@@ -10,8 +10,17 @@ namespace Account.Core
         private static string SECRET_KEY = "O2jst4mIun13Od5Xzbo5AwKxR28Jn38U";
         public static Bill OcrImage(string imagePath)
         {
+            if (!File.Exists(imagePath))
+            {
+                throw new FileNotFoundException("文件未找到", imagePath);
+            }
             // Convert image to Base64 string
             string imageBase64 = ImageHelper.ConvertImageToBase64(imagePath);
+
+            if (string.IsNullOrEmpty(imageBase64))
+            {
+                throw new Exception("未成功转化");
+            }
 
             var client = new RestClient($"https://aip.baidubce.com/rest/2.0/ocr/v1/general?access_token={GetAccessToken()}");
             client.Timeout = -1;
@@ -25,8 +34,20 @@ namespace Account.Core
             request.AddParameter("paragraph", "false");
             request.AddParameter("probability", "false");
             IRestResponse response = client.Execute(request);
+
+            if (!response.IsSuccessful)
+            {
+                throw new Exception($"OCR API 呼叫失败： {response.Content}");
+            }
+
             Console.WriteLine(response.Content);
             var result = JsonConvert.DeserializeObject<dynamic>(response.Content);
+
+            if (result == null || result.words_result == null)
+            {
+                throw new Exception("OCR API 响应不合法或者空");
+            }
+
             Bill bill = new Bill();
             List<string> wordsList = new List<string>();
 

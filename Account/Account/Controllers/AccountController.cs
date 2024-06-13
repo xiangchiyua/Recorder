@@ -73,10 +73,12 @@ namespace Account.Controllers
                 Bill ocr = OcrHelper.OcrImage(billImage);
                 bill.Type = "饮食";
                 bill.DateTime = ocr.DateTime;
-                bill.Money = ocr.Money;
+                bill.Money = (float?)Math.Round((decimal)ocr.Money, 2, MidpointRounding.AwayFromZero);
+           
                 bill.Remarks = ocr.Remarks;
                 //_logger.LogInformation(bill.toString());
                 BillDal billDal = new BillDal();
+                Thread.Sleep(5000);
                 return billDal.InsertBill(bill);
                 
             }

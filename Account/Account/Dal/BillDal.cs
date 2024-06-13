@@ -103,6 +103,7 @@ namespace Account.Dal
         public long InsertBill(Bill bill)
         {
             string sql = "INSERT INTO bill(cateID,money,remarks,type,dateTime) VALUES(@cateID,@money,@remarks,@type,@dateTime)";
+            bill.Money = (float?)Math.Round((decimal)bill.Money, 2, MidpointRounding.AwayFromZero);
             return SqlHelper.ExecuteNonQuery(sql,
                 new SqlParameter[]
                 {

@@ -1,9 +1,0 @@
-C:\Users\LENOVO\StudioProjects\Recorder\OCRAPI\obj\Release\net6.0\PubTmp\Out\OCRAPI.exe
-C:\Users\LENOVO\StudioProjects\Recorder\OCRAPI\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
-C:\Users\LENOVO\StudioProjects\Recorder\OCRAPI\obj\Release\net6.0\PubTmp\Out\appsettings.json
-C:\Users\LENOVO\StudioProjects\Recorder\OCRAPI\obj\Release\net6.0\PubTmp\Out\OCRAPI.dll
-C:\Users\LENOVO\StudioProjects\Recorder\OCRAPI\obj\Release\net6.0\PubTmp\Out\OCRAPI.deps.json
-C:\Users\LENOVO\StudioProjects\Recorder\OCRAPI\obj\Release\net6.0\PubTmp\Out\OCRAPI.runtimeconfig.json
-C:\Users\LENOVO\StudioProjects\Recorder\OCRAPI\obj\Release\net6.0\PubTmp\Out\OCRAPI.pdb
-C:\Users\LENOVO\StudioProjects\Recorder\OCRAPI\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.dll
-C:\Users\LENOVO\StudioProjects\Recorder\OCRAPI\obj\Release\net6.0\PubTmp\Out\RestSharp.dll

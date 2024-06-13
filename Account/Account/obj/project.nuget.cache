@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wJsXAOdyimsFQVBsUd6hycTQw5pW6RTobh0vqC+h0EE4BZYdAFiZJl09Swn/S0bfPER8uCSVeZTsCtXfes+QqQ==",
+  "dgSpecHash": "/goYMChS72f3XpiE4lY3uret5XxciRujL+kHMMRhkEcJER2tLCJPyE9xcPhhhoCBTRMa08aEGrXSlz2ZhSAdLw==",
   "success": true,
   "projectFilePath": "D:\\code\\C#final\\Recorder\\Account\\Account\\Account.csproj",
   "expectedPackageFiles": [
@@ -26,6 +26,7 @@
     "C:\\Users\\胥翔云\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\胥翔云\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\胥翔云\\.nuget\\packages\\restsharp\\106.15.0\\restsharp.106.15.0.nupkg.sha512",
+    "C:\\Users\\胥翔云\\.nuget\\packages\\serilog\\4.0.0\\serilog.4.0.0.nupkg.sha512",
     "C:\\Users\\胥翔云\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\胥翔云\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\胥翔云\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
